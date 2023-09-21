@@ -1,5 +1,5 @@
 .judgeWrapper{
-    @apply bg-primarybg py-12 grid grid-cols-2 px-20
+    @apply bg-primarybg py-12 grid grid-cols-2 px-20 items-center
 }
 .judgeRight{
     @apply flex flex-col space-y-5

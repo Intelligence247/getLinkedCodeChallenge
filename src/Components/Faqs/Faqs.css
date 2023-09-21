@@ -1,0 +1,35 @@
+.faqWrapper{
+    @apply bg-primarybg py-12 grid grid-cols-2 px-20 items-center
+
+}
+
+.ans{
+    @apply  h-0 overflow-hidden text-[#696767] pt-2 transition-all ease-linear duration-[.3s]
+}
+.activeQ{
+    
+    @apply h-auto overflow-auto pb-2
+}
+.question{
+    @apply font-[600] cursor-pointer flex justify-between
+}
+.lessmore{
+    @apply text-primaryPurple
+}
+.QuesW{
+    @apply mt-[1rem] border-b-2
+}
+.allQ{
+    @apply flex flex-col gap-10
+}
+
+
+
+
+
+.faqHeader p{
+    @apply text-[2rem] leading-[2rem]
+}
+.faqHeader P:last-child{
+    @apply text-primaryPurple
+}

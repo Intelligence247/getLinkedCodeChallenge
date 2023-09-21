@@ -4,6 +4,7 @@ import Hero from '../../Components/HeroSection/Hero'
 import "./HomePage.css"
 import Intro from '../../Components/Intro/Intro'
 import Judge from '../../Components/Judge/Judge'
+import Faqs from '../../Components/Faqs/Faqs'
 const HomePage = () => {
   return (
     <div>
@@ -24,6 +25,7 @@ const HomePage = () => {
         order='order-2'
         />
         <Judge/>
+        <Faqs/>
         
     </div>
   )
