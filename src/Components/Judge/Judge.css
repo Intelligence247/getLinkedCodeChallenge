@@ -1,0 +1,15 @@
+.judgeWrapper{
+    @apply bg-primarybg py-12 grid grid-cols-2 px-20
+}
+.judgeRight{
+    @apply flex flex-col space-y-5
+}
+.judgeHeader p{
+    @apply text-[2rem] leading-[2rem]
+}
+.judgeHeader P:last-child{
+    @apply text-primaryPurple
+}
+.judgeContent span{
+    @apply text-primaryPurple font-bold
+}
