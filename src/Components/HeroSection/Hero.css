@@ -1,5 +1,6 @@
 .heroWrapper{
-    @apply bg-primarybg mt-20 px-20
+    @apply bg-primarybg mt-20 px-20 border-b-gray-50 border-b-[1px] 
+    border-opacity-20
 }
 .heroWrapper .ignite{
     @apply flex justify-end flex-col items-end
@@ -16,12 +17,12 @@
 .heroLeft{
     @apply flex flex-col
 }
-.heroLeft p:first-child, .hack p{
+.heroLeft > p:first-child, .hack p{
     font-family: Clash Display;
-    @apply text-7xl leading-7
+    @apply text-7xl leading-[4.5rem]
 }
-.heroLeft p:last-child{
-    @apply text-[20px]
+.hack p span{
+    @apply font-bold text-primaryPurple
 }
 .heroLeft .hack{
     @apply flex items-center relative z-[1]
@@ -33,3 +34,16 @@
 .heroRight img:last-child{
     @apply absolute top-0
 }
+.heroLeft button{
+    @apply mt-8
+}
+.time {
+    @apply flex space-x-2 mt-8
+}
+.time p{
+    font-family: Unica One;
+    @apply text-[4rem]
+ }
+ .time sub{
+    @apply text-base 
+ }

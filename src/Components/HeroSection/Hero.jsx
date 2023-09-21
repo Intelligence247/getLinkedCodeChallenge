@@ -15,8 +15,13 @@ const Hero = () => {
     <img src="/chain.png" alt="chain logo" />
     <img src="fire.png" alt="fire logo" />
     </div>
-    <p>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
+    <p className='text-xl'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
     <button>Register</button>
+    <div className="time">
+    <p>00<sub>H</sub></p>
+    <p>00<sub>M</sub></p>
+    <p>00<sub>S</sub></p>
+    </div>
       </div>
       <div className="heroRight">
         <img src="/glass.png" alt="" />

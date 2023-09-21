@@ -5,3 +5,7 @@
   font-family: Montserrat;
   @apply p-0 m-0 box-border text-white
 }
+button{
+  background: linear-gradient(90deg,#903AFF, #FE34B9);
+  @apply w-[10rem] h-[3rem] rounded-lg flex justify-center items-center
+}

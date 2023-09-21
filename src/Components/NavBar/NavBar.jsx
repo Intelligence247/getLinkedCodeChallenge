@@ -18,10 +18,7 @@ const NavBar = () => {
         text: 'Contact',
         link: '',
     },
-    {
-      text: 'Register',
-      link: '',
-  },
+   
     
 ]
   return (
@@ -30,10 +27,11 @@ const NavBar = () => {
       <span className='flex-grow-[1]'></span>
       <div className="navRight">
         {
-            navObj.map((n)=>(
-            <a href={n.link}>{n.text}</a>
+            navObj.map((n,i)=>(
+            <a href={n.link} key={i}>{n.text}</a>
             ))
         }
+        <button>Register</button>
       </div>
     </div>
   )

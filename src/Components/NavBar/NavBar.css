@@ -1,5 +1,7 @@
 .navWraper{
-    @apply flex px-20 justify-center items-center h-20 bg-primarybg border-b-gray-50 border-b-[1px] border-opacity-20 fixed top-0 w-full
+    @apply flex px-20 justify-center items-center
+     h-20 bg-primarybg border-b-gray-50 border-b-[1px] 
+    border-opacity-20 fixed top-0 w-full z-30
 }
 .navLeft{
     font-family: Clash Display;
@@ -9,8 +11,9 @@
     @apply text-primaryPurple
 }
 .navRight{
-    @apply flex lg:flex-row flex-col space-x-8
+    @apply flex lg:flex-row flex-col space-x-8 items-center
 }
 .navRight a {
     @apply inline-block
 }
+ 
