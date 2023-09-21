@@ -1,0 +1,35 @@
+.heroWrapper{
+    @apply bg-primarybg mt-20 px-20
+}
+.heroWrapper .ignite{
+    @apply flex justify-end flex-col items-end
+}
+.heroWrapper .ignite p{
+    @apply text-4xl mt-[2rem] italic
+}
+.heroWrapper .ignite img{
+    @apply w-max
+}
+.heroWrapper2{
+    @apply flex justify-center items-center
+}
+.heroLeft{
+    @apply flex flex-col
+}
+.heroLeft p:first-child, .hack p{
+    font-family: Clash Display;
+    @apply text-7xl leading-7
+}
+.heroLeft p:last-child{
+    @apply text-[20px]
+}
+.heroLeft .hack{
+    @apply flex items-center relative z-[1]
+}
+.heroRight{
+    @apply relative z-[0]
+}
+
+.heroRight img:last-child{
+    @apply absolute top-0
+}

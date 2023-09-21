@@ -1,0 +1,16 @@
+.navWraper{
+    @apply flex px-20 justify-center items-center h-20 bg-primarybg border-b-gray-50 border-b-[1px] border-opacity-20 fixed top-0 w-full
+}
+.navLeft{
+    font-family: Clash Display;
+    @apply text-4xl 
+}
+.navLeft span{
+    @apply text-primaryPurple
+}
+.navRight{
+    @apply flex lg:flex-row flex-col space-x-8
+}
+.navRight a {
+    @apply inline-block
+}
