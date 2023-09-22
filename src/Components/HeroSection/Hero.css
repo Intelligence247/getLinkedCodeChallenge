@@ -1,5 +1,5 @@
 .heroWrapper{
-    @apply bg-primarybg mt-20 px-20 border-b-gray-50 border-b-[1px] 
+    @apply bg-primarybg mt-20 lg:px-20 px-4 border-b-gray-50 border-b-[1px] 
     border-opacity-20
 }
 .heroWrapper .ignite{

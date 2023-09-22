@@ -1,5 +1,5 @@
 .footerWrapper{
-    @apply flex flex-col bg-primarybg justify-center items-center px-20 border-b-gray-50 border-b-[1px] space-y-8 py-12
+    @apply flex flex-col bg-primarybg justify-center items-center lg:px-20 px-4 border-b-gray-50 border-b-[1px] space-y-8 py-12
 }
 .footerWrapper2{
     @apply grid lg:grid-cols-3 w-full
@@ -15,10 +15,10 @@
     @apply text-primaryPurple
 }
 .footercenter{
-    @apply flex justify-start items-center flex-col
+    @apply flex justify-start lg:items-center flex-col
 }
 .footercenter2{
-    @apply flex justify-start items-baseline flex-col space-y-4
+    @apply flex lg:justify-start items-baseline flex-col space-y-4
 
 }
 .footercenter2 h1,.footerbottom h1{

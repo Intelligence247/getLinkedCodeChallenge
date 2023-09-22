@@ -5,7 +5,7 @@ const Prices = () => {
   return (
     <div className='priceWrapper'>
       <div className="priceLeft relative">
-        <img src="/purple.png" className='absolute left-[20%]' alt="" />
+        <img src="/purple.png" className='absolute lg:left-[20%]' alt="" />
         <img src="/cup.png"  className='relative z-10' alt="" />
       </div>
       <div className="priceRight">
@@ -13,8 +13,8 @@ const Prices = () => {
             <p>Price and</p>
             <p>Rewards</p>
         </div>
-        <h2 className='w-[20rem]'>Highlight of the prizes or rewards for winners and for Participants</h2>
-        <div className="awards ">
+        <h2 className='lg:w-[20rem] w-full'>Highlight of the prizes or rewards for winners and for Participants</h2>
+        <div className="awards">
 <PrizeCrd 
 position={'2nd'}
 amount={'300,000'}

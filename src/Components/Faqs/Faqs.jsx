@@ -47,7 +47,6 @@ want to ask about getlinked Hackathon 1.0</p>
       </div>
       </div>
       <div className="faqRight">
-      <img src="/purple.png"  className='absolute bottom-[70%] scale-50' alt="" />
 
         <QMark/>
 <img src="/Faqimg.png" alt="" />

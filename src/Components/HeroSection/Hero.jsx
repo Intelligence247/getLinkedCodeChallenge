@@ -13,7 +13,7 @@ const Hero = () => {
 <p className='relative z-10 flex flex-col justify-center items-end'>
   <img src="Creativebulb.png" className='' alt="" />
   getlinked Tech</p>
-<img src="/purple.png" className='absolute -top-40 -right-20 z-0 ' alt="" />
+{/* <img src="/purple.png" className='absolute -top-40 lg:-right-20 z-0 ' alt="" /> */}
 
 <div className="hack relative z-10">
     <p>Hackathon<span>1.0</span></p>
