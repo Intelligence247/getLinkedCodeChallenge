@@ -9,7 +9,7 @@ export default {
       colors:{
         primarybg: '#140D27',
         primaryPurple: '#D434FE',
-        primaryBlue:'903AFF',
+        primaryBlue:'#903AFF',
       }
     },
   },

@@ -24,13 +24,12 @@
     @apply flex flex-col gap-10
 }
 
-
-
-
-
 .faqHeader p{
     @apply text-[2rem] leading-[2rem]
 }
 .faqHeader P:last-child{
     @apply text-primaryPurple
 }
+
+
+

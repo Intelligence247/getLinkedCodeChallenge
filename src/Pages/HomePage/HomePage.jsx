@@ -6,6 +6,7 @@ import Intro from '../../Components/Intro/Intro'
 import Judge from '../../Components/Judge/Judge'
 import Faqs from '../../Components/Faqs/Faqs'
 import Timeline from '../../Components/Timeline/Timeline'
+import Prices from '../../Components/Prizes/Prices'
 const HomePage = () => {
   return (
     <div>
@@ -28,6 +29,7 @@ const HomePage = () => {
         <Judge/>
         <Faqs/>
         <Timeline/>
+        <Prices/>
         
     </div>
   )

@@ -1,0 +1,21 @@
+.priceWrapper{
+    @apply px-20 py-12 bg-primarybg grid grid-cols-2 
+}
+
+.awards{
+    @apply flex flex-row space-x-2
+}
+
+
+
+
+
+
+
+
+.priceHeader p{
+    @apply text-[2rem] leading-[2rem]
+}
+.priceHeader P:last-child{
+    @apply text-primaryPurple
+}
