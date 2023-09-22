@@ -1,15 +1,18 @@
+/* .footerWrapper *{
+    @apply scale-95
+} */
 .footerWrapper{
     @apply flex flex-col bg-primarybg justify-center items-center lg:px-20 px-4 border-b-gray-50 border-b-[1px] space-y-8 py-12
 }
 .footerWrapper2{
-    @apply grid lg:grid-cols-3 w-full
+    @apply grid lg:grid-cols-3 grid-cols-1 lg:space-y-0 space-y-6 w-full
 }
 .footertop{
-    @apply flex flex-col space-y-16
+    @apply flex flex-col lg:space-y-16 space-y-10
 }
 .footerHeader{
     font-family: Clash Display;
-    @apply text-4xl 
+    @apply lg:text-4xl text-[20px] font-bold 
 }
 .footerHeader span{
     @apply text-primaryPurple
@@ -18,7 +21,7 @@
     @apply flex justify-start lg:items-center flex-col
 }
 .footercenter2{
-    @apply flex lg:justify-start items-baseline flex-col space-y-4
+    @apply flex lg:justify-start items-baseline flex-col lg:space-y-4 space-y-2
 
 }
 .footercenter2 h1,.footerbottom h1{
@@ -28,7 +31,7 @@
     @apply  flex items-center space-x-4
 }
 .footerbottom{
-    @apply flex flex-col space-y-6 
+    @apply flex flex-col lg:space-y-4 space-y-2 
 }
 .footerbottom .phone{
     @apply flex space-x-2 justify-start items-center

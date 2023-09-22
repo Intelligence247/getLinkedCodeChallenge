@@ -1,21 +1,29 @@
 .navWraper{
     @apply flex lg:px-20 px-4 justify-center items-center
      h-20 bg-primarybg border-b-gray-50 border-b-[1px] 
-    border-opacity-20 fixed top-0 w-full z-30
+    border-opacity-20 fixed top-0 w-full z-30 backdrop-blur-[9px] bg-opacity-30
 }
 .navLeft{
     font-family: Clash Display;
-    @apply text-4xl 
+    @apply lg:text-4xl text-[20px] font-bold  
 }
 .navLeft span{
     @apply text-primaryPurple
 }
 .navRight{
-    @apply flex lg:flex-row flex-col space-x-8 items-center lg:relative fixed top-0 right-0
+    @apply flex lg:flex-row flex-col lg:space-x-8 lg:space-y-0 space-y-8 lg:items-center lg:relative fixed top-0 lg:bg-primarybg bg-[#150E28]
+    lg:w-max w-[70%] right-0 lg:h-auto h-screen justify-center items-start pl-5 
+    
+}
+.navRightA{
+    @apply -right-[70%] 
 }
 .navRight a {
     @apply inline-block
 }
  .harmBurger{
-    @apply lg:hidden 
+    @apply relative flex justify-center items-center lg:hidden
+ }
+ .navWraper button{
+    @apply m-0
  }

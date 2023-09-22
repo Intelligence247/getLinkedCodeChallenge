@@ -6,21 +6,25 @@
     @apply flex w-full justify-center items-center flex-col space-y-4
 }
 .partnerHeader p{
-    @apply lg:w-[45%] w-full text-center
+    @apply lg:w-[45%] w-full text-center lg:text-base text-sm
 }
+
 .partnerHeader h1{
     @apply lg:text-[2rem] text-[20px] font-bold
 }
 .partnerMain{
-    @apply flex flex-wrap lg:w-[50rem] w-full gap-6 m-auto justify-center items-center border-[1px] border-primaryPurple p-14
+    @apply grid grid-cols-3 flex-wrap lg:w-[50rem] w-full lg:gap-6 gap-4 m-auto justify-center items-center border-[1px] border-primaryPurple lg:p-14 p-5 
 }
 .eachPartnerImg{
-    @apply flex space-x-8
+    @apply flex lg:space-x-8 space-x-4 
 }
 
 .imgW{
-@apply border-b-4 relative border-primaryPurple p-3 px-6 w-40 flex justify-center items-center
+@apply lg:border-b-4 border-b-[2px] relative border-primaryPurple lg:p-3 lg:px-6 lg:pr-0 lg:w-40 lg:h-36 h-10 w-12 flex justify-center items-center pb-1
  
+}
+.imgW img{
+    @apply lg:w-max w-8
 }
 
 .imgW:nth-of-type(4),
@@ -30,5 +34,5 @@
 }
 
 .eachPartnerImg .Line{
-@apply h-28 w-1 bg-primaryPurple
+@apply lg:h-28 h-8 lg:w-1 w-[1.5px] bg-primaryPurple
 }

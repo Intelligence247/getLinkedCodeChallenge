@@ -4,16 +4,21 @@ import PrizeCrd from './PrizeCrd'
 const Prices = () => {
   return (
     <div className='priceWrapper'>
-      <div className="priceLeft relative">
+      <div className="priceLeft relative lg:block hidden">
         <img src="/purple.png" className='absolute lg:left-[20%]' alt="" />
         <img src="/cup.png"  className='relative z-10' alt="" />
       </div>
+
       <div className="priceRight">
         <div className="priceHeader">
-            <p>Price and</p>
+            <p>Prizes and</p>
             <p>Rewards</p>
         </div>
-        <h2 className='lg:w-[20rem] w-full'>Highlight of the prizes or rewards for winners and for Participants</h2>
+       <h2 className='lg:w-[20rem] w-full lg:texrt-base text-sm lg:text-start text-center'>Highlight of the prizes or rewards for winners and for Participants</h2>
+       <div className="priceLeft relative lg:hidden block">
+        <img src="/purple.png" className='absolute left-0 -top-20' alt="" />
+        <img src="/cup.png"  className='relative z-10' alt="" />
+      </div>
         <div className="awards">
 <PrizeCrd 
 position={'2nd'}

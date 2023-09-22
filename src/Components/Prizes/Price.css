@@ -16,7 +16,7 @@
 
 }
 .priceHeader p{
-    @apply text-[2rem] leading-[2rem]
+    @apply lg:text-[2rem] lg:leading-[2rem] text-[20px] leading-[20px]
 }
 .priceHeader P:last-child{
     @apply text-primaryPurple

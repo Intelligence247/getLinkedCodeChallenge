@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./NavBar.css"
 const NavBar = () => {
+  const [active, setactive] = useState(true);
     const navObj = [
         {
         text: 'Timeline',
@@ -25,7 +26,7 @@ const NavBar = () => {
     <div className='navWraper'>
       <div className="navLeft">get<span>linked</span></div>
       <span className='flex-grow-[1]'></span>
-      <div className="navRight">
+      <div className={`navRight ${active?'navRightA':'navRight'}`}>
         {
             navObj.map((n,i)=>(
             <a href={n.link} key={i}>{n.text}</a>
@@ -33,10 +34,10 @@ const NavBar = () => {
         }
         <button>Register</button>
       </div>
-      <div className="harmBurger">
-        <p></p>
-        <p></p>
-        <p></p>
+      <div className="harmBurger"
+      onClick={()=>setactive(!active)}
+      >
+       <img src={`${active?"/burgera.png":"/burgerx.png"}`} alt="" />
       </div>
     </div>
   )

@@ -1,16 +1,24 @@
 .privacyWrapper{
-    @apply bg-primarybg py-12 lg:grid grid-cols-2 lg:px-20 px-4 items-center
+    @apply bg-primarybg py-12 lg:grid grid-cols-2 lg:space-x-4 lg:space-y-0 space-y-10 lg:px-20 px-4 items-center
+}
+.privacyLeft1{
+    @apply flex-col flex space-y-8
+}
+.privacyLeft1 > p,.privacyLeft > p, .privacyRightHeader p{
+    @apply lg:text-base text-sm lg:text-start text-center
 }
 .privacyLeft{
-    @apply p-4 flex-col flex space-y-8 justify-center items-center bg-[url('/purple.png')]  bg-right-top border-primaryPurple border-[1px]
+    @apply p-4 py-12 flex-col flex space-y-8 justify-center items-center bg-[url('/purple.png')]  bg-right-top border-primaryPurple border-[1px]
 }
-
+.privacyHeader {
+    @apply flex-col flex justify-center lg:items-start items-center
+}
 .privacyHeader p{
-    @apply text-[2rem] leading-[2rem]
+    @apply lg:text-[2rem] lg:leading-[2rem] text-[20px] leading-[20px]
 }
 .privacyHeader P:last-child{
     @apply text-primaryPurple
 }
 .privacyRight{
-    @apply bg-[url('/privacyVector.png')] bg-center bg-cover bg-no-repeat
+    @apply bg-[url('/privacyVector.png')] bg-cover bg-center bg-no-repeat 
 }
