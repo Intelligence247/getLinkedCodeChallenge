@@ -1,5 +1,11 @@
 .footerWrapper{
-    @apply grid grid-cols-3 bg-primarybg justify-center items-center px-20 border-b-gray-50 border-b-[1px] 
+    @apply flex flex-col bg-primarybg justify-center items-center px-20 border-b-gray-50 border-b-[1px] 
+}
+.footerWrapper2{
+    @apply grid grid-cols-3 w-full
+}
+.footertop{
+    @apply flex flex-col space-y-16
 }
 .footerHeader{
     font-family: Clash Display;
@@ -7,4 +13,17 @@
 }
 .footerHeader span{
     @apply text-primaryPurple
+}
+.footercenter{
+    @apply flex justify-start items-center flex-col
+}
+.footercenter2{
+    @apply flex justify-start items-baseline flex-col space-y-4
+
+}
+.footercenter2 h1{
+    @apply text-primaryPurple
+}
+.socio{
+    @apply  flex items-center space-x-4
 }
