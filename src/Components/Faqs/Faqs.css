@@ -1,15 +1,15 @@
 .faqWrapper{
     @apply bg-primarybg py-12 grid lg:grid-cols-2 grid-cols-1 lg:px-20 px-4 items-center border-b-gray-50 border-b-[1px] 
-    border-opacity-20 relative
+    border-opacity-20 relative lg:space-y-0 space-y-20
 
 }
 
 .ans{
-    @apply  h-0 overflow-hidden text-[#696767] pt-2 transition-all ease-linear duration-[.3s]
+    @apply  h-0 overflow-hidden text-[#696767] pt-2 transition-all ease-linear duration-[.3s] lg:text-base text-sm
 }
 .activeQ{
     
-    @apply h-auto overflow-auto pb-2
+    @apply h-auto overflow-auto pb-2 
 }
 .question{
     @apply font-[600] cursor-pointer flex justify-between
@@ -24,7 +24,7 @@
     @apply flex flex-col gap-10
 }
 .faqRight{
-    @apply relative bg-[url('/purple.png')] bg-left-bottom
+    @apply relative lg:bg-[url('/purple.png')] bg-left-bottom
 }
 .faqHeader{
     @apply flex flex-col lg:space-y-5 space-y-2 lg:items-start items-center

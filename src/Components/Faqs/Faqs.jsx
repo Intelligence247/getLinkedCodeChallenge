@@ -38,7 +38,7 @@ const Faqs = () => {
     <p>Question</p>
     
 </div>
-<p className='py-6'>We got answers to the questions that you might
+<p className='py-6 lg:text-start text-center'>We got answers to the questions that you might
 want to ask about getlinked Hackathon 1.0</p>
 <div className="allQ">
         {QandA.map((q, i) => (

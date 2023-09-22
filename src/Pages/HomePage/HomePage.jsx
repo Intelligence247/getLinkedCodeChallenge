@@ -23,11 +23,11 @@ const HomePage = () => {
         />
         <Intro
         display=""
-        txt1="Rules"
+        txt1="Rules and"
         txt2="Guidlines"
         img1="wom.png"
         arrowDisplay="hidden"
-        order='introLeft2 order-2'
+        order='introLeft2 lg:order-2'
         intro2="introRight2"
         />
         <Judge/>

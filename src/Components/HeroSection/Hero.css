@@ -1,12 +1,12 @@
 .heroWrapper{
     @apply bg-primarybg mt-20 lg:px-20 px-4 border-b-gray-50 border-b-[1px] 
-    border-opacity-20
+    border-opacity-20 lg:space-y-0 space-y-4
 }
 .heroWrapper .ignite{
-    @apply flex justify-end flex-col items-end
+    @apply flex justify-center flex-col items-end
 }
 .heroWrapper .ignite p{
-    @apply lg:text-4xl text-[14px] mt-[2rem] italic
+    @apply lg:text-4xl text-[16px] mt-[2rem] italic font-bold
 }
 .heroWrapper .ignite img{
     @apply lg:w-max w-[115px]
@@ -15,12 +15,12 @@
     @apply flex justify-center items-center lg:flex-row flex-col
 }
 .heroLeft{
-    @apply flex flex-col relative
+    @apply flex flex-col relative bg-[url('/purple.png')]  bg-left-bottom
     /* bg-[url('/purple.png')] bg-bottom */
 }
 .heroLeft > p:first-child, .hack p{
     font-family: Clash Display;
-    @apply lg:text-7xl text-[37px] leading-[4.5rem] 
+    @apply lg:text-7xl text-[37px] lg:leading-[4.5rem] leading-[2.5rem]
 }
 .heroLeft > p:first-child img{
     @apply lg:w-max w-[18px] 
@@ -35,7 +35,7 @@
     @apply flex items-center relative 
 }
 .heroRight{
-    @apply relative
+    @apply relative 
 }
 
 .heroRight img:last-child{
@@ -45,11 +45,11 @@
     @apply mt-8
 }
 .time {
-    @apply flex space-x-2 mt-8
+    @apply flex space-x-2 mt-8 lg:justify-start justify-center
 }
 .time p{
     font-family: Unica One;
-    @apply text-[4rem]
+    @apply text-[4rem] relative
  }
  .time sub{
     @apply text-base 

@@ -1,15 +1,16 @@
 .judgeWrapper{
-    @apply bg-primarybg py-12 grid lg:grid-cols-2 grid-cols-1 lg:px-20 px-4 items-center
+    @apply bg-primarybg py-12 grid lg:grid-cols-2 grid-cols-1 lg:px-20 px-4 items-center border-b-gray-50 border-b-[1px] 
+    border-opacity-20
 }
 .judgeLeft{
     @apply bg-[url(purple.png)] bg-center bg-cover
 }
 .judgeRight{
-    @apply flex flex-col justify-center lg:text-start text-center lg:items-start items-center lg:space-y-5 space-y-2
+    @apply flex flex-col justify-center lg:text-start text-center lg:items-start items-center space-y-5
 
 }
 .judgeHeader p{
-    @apply lg:text-[2rem] text-[20px] lg:leading-[2rem] leading-[20px]
+    @apply lg:text-[2rem] text-[20px] lg:leading-[2rem] leading-[28px]
 
 }
 .judgeHeader P:last-child{

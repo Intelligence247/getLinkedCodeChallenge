@@ -1,10 +1,11 @@
 .introWrapper{
-    @apply lg:grid grid-cols-2 justify-center items-center lg:px-20 px-4 border-b-gray-50 border-b-[1px] 
-    border-opacity-20 py-12
+    @apply grid lg:grid-cols-2 grid-cols-1 justify-center items-center lg:px-20 px-4 border-b-gray-50 border-b-[1px] 
+    border-opacity-20 py-12 lg:gap-y-0 gap-y-6
 }
 
 .introLeft1{
-    @apply  bg-none relative
+    @apply  bg-none relative flex flex-col items-center justify-center
+
 }
 .introLeft2{
     @apply relative bg-[url('/purple.png')]  bg-left-top
@@ -22,10 +23,10 @@ p.idea{
 
 }
 .intoLeftContent{
-    @apply flex flex-col justify-center lg:items-start items-center
+    @apply flex flex-col justify-center lg:items-start items-center 
 }
 .intoLeftContent p{
-    @apply lg:text-[2rem] text-[20px] lg:leading-[2rem] leading-[20px]
+    @apply lg:text-[2rem] text-[20px] lg:leading-[2rem] leading-[28px]
 }
 .intoLeftContent P:last-child{
     @apply text-primaryPurple

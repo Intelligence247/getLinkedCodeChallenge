@@ -10,18 +10,19 @@ const Hero = () => {
         <div className="heroWrapper2">
       <div className="heroLeft">
         
-<p className='relative z-10 flex flex-col justify-center items-end'>
+<p className='relative flex flex-col justify-center items-end'>
   <img src="Creativebulb.png" className='' alt="" />
   getlinked Tech</p>
 {/* <img src="/purple.png" className='absolute -top-40 lg:-right-20 z-0 ' alt="" /> */}
 
-<div className="hack relative z-10">
+
+<div className="hack relative">
     <p>Hackathon<span>1.0</span></p>
     <img src="/chain.png" alt="chain logo" />
     <img src="fire.png" alt="fire logo" />
     </div>
 
-    <p className='text-xl'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
+    <p className='lg:text-xl text-sm lg:text-start text-center lg:w-max w-[90%] lg:m-0 m-auto'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
     <button>Register</button>
     <div className="time">
     <p>00<sub>H</sub></p>
