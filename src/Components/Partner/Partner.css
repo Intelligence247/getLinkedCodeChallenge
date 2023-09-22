@@ -3,10 +3,13 @@
     border-opacity-20
 }
 .partnerHeader{
-    @apply flex w-full justify-center items-center flex-col
+    @apply flex w-full justify-center items-center flex-col space-y-4
 }
 .partnerHeader p{
     @apply lg:w-[45%] w-full text-center
+}
+.partnerHeader h1{
+    @apply text-[2rem] font-bold
 }
 .partnerMain{
     @apply flex flex-wrap lg:w-[50rem] w-full gap-6 m-auto justify-center items-center border-[1px] border-primaryPurple p-14

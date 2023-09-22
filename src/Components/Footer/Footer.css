@@ -1,0 +1,10 @@
+.footerWrapper{
+    @apply grid grid-cols-3 bg-primarybg justify-center items-center px-20 border-b-gray-50 border-b-[1px] 
+}
+.footerHeader{
+    font-family: Clash Display;
+    @apply text-4xl 
+}
+.footerHeader span{
+    @apply text-primaryPurple
+}

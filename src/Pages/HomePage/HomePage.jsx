@@ -8,6 +8,8 @@ import Faqs from '../../Components/Faqs/Faqs'
 import Timeline from '../../Components/Timeline/Timeline'
 import Prices from '../../Components/Prizes/Prices'
 import Partner from '../../Components/Partner/Partner'
+import Privacy from '../../Components/Privacy/Privacy'
+import Footer from '../../Components/Footer/Footer'
 const HomePage = () => {
   return (
     <div>
@@ -32,6 +34,8 @@ const HomePage = () => {
         <Timeline/>
         <Prices/>
         <Partner/>
+        <Privacy/>
+        <Footer/>
         
     </div>
   )

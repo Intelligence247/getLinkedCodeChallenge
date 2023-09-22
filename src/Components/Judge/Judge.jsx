@@ -46,8 +46,8 @@ const Judge = () => {
             <p>Key attributes</p>
         </div>
 
-            {judgeObj.map((j)=>(
-                <div className="judgeContent">
+            {judgeObj.map((j,i)=>(
+                <div className="judgeContent" key={i}>
                     <span>{j.title}</span> {j.desc}
                 </div>
             ))}
