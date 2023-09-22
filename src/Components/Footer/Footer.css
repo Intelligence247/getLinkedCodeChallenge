@@ -2,7 +2,7 @@
     @apply flex flex-col bg-primarybg justify-center items-center px-20 border-b-gray-50 border-b-[1px] space-y-8 py-12
 }
 .footerWrapper2{
-    @apply grid grid-cols-3 w-full
+    @apply grid lg:grid-cols-3 w-full
 }
 .footertop{
     @apply flex flex-col space-y-16

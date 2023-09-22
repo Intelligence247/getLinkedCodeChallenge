@@ -7,7 +7,7 @@
 }
 button{
   background: linear-gradient(90deg,#903AFF, #FE34B9);
-  @apply w-[10rem] h-[3rem] rounded-lg flex justify-center items-center
+  @apply lg:w-[10rem] w-[8rem] h-[2.5rem] lg:h-[3rem] rounded-lg flex justify-center items-center
 }
 
 *::selection{

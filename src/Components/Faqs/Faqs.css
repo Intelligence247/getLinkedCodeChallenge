@@ -1,5 +1,5 @@
 .faqWrapper{
-    @apply bg-primarybg py-12 grid grid-cols-2 px-20 items-center border-b-gray-50 border-b-[1px] 
+    @apply bg-primarybg py-12 grid lg:grid-cols-2 grid-cols-1 lg:px-20 px-4 items-center border-b-gray-50 border-b-[1px] 
     border-opacity-20 relative
 
 }
@@ -26,12 +26,16 @@
 .faqRight{
     @apply relative bg-[url('/purple.png')] bg-left-bottom
 }
+.faqHeader{
+    @apply flex flex-col lg:space-y-5 space-y-2 lg:items-start items-center
+}
 .faqHeader p{
-    @apply text-[2rem] leading-[2rem]
+    @apply lg:text-[2rem] lg:leading-[2rem] text-[20px] leading-[20px]
 }
 .faqHeader P:last-child{
     @apply text-primaryPurple
 }
+
 
 
 .qWrapper{

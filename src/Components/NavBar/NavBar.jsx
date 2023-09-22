@@ -33,6 +33,11 @@ const NavBar = () => {
         }
         <button>Register</button>
       </div>
+      <div className="harmBurger">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
     </div>
   )
 }

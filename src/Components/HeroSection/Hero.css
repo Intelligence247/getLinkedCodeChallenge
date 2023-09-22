@@ -6,13 +6,13 @@
     @apply flex justify-end flex-col items-end
 }
 .heroWrapper .ignite p{
-    @apply text-4xl mt-[2rem] italic
+    @apply lg:text-4xl text-[14px] mt-[2rem] italic
 }
 .heroWrapper .ignite img{
-    @apply w-max
+    @apply lg:w-max w-[115px]
 }
 .heroWrapper2{
-    @apply flex justify-center items-center
+    @apply flex justify-center items-center lg:flex-row flex-col
 }
 .heroLeft{
     @apply flex flex-col relative
@@ -20,7 +20,13 @@
 }
 .heroLeft > p:first-child, .hack p{
     font-family: Clash Display;
-    @apply text-7xl leading-[4.5rem]
+    @apply lg:text-7xl text-[37px] leading-[4.5rem] 
+}
+.heroLeft > p:first-child img{
+    @apply lg:w-max w-[18px] 
+}
+.heroLeft .hack img{
+    @apply lg:w-max w-[2rem] 
 }
 .hack p span{
     @apply font-bold text-primaryPurple

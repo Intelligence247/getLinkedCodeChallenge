@@ -1,5 +1,5 @@
 .introWrapper{
-    @apply grid grid-cols-2 justify-center items-center px-20 border-b-gray-50 border-b-[1px] 
+    @apply lg:grid grid-cols-2 justify-center items-center lg:px-20 px-4 border-b-gray-50 border-b-[1px] 
     border-opacity-20 py-12
 }
 
@@ -22,10 +22,10 @@ p.idea{
 
 }
 .intoLeftContent{
-    @apply flex flex-col 
+    @apply flex flex-col justify-center lg:items-start items-center
 }
 .intoLeftContent p{
-    @apply text-[2rem] leading-[2rem]
+    @apply lg:text-[2rem] text-[20px] lg:leading-[2rem] leading-[20px]
 }
 .intoLeftContent P:last-child{
     @apply text-primaryPurple

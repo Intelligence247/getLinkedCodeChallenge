@@ -8,7 +8,7 @@
     @apply text-[2rem]
  }
  .timelineContent{
-    @apply flex mt-20 justify-center items-center space-x-0 space-x-8
+    @apply  lg:flex mt-20 justify-center items-center space-x-8 hidden
  }
  .timelineLeft,.timelineRight{
     @apply w-[40%] flex-col flex space-y-[6rem]
