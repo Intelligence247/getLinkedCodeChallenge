@@ -2,18 +2,24 @@
     @apply grid grid-cols-2 justify-center items-center px-20 border-b-gray-50 border-b-[1px] 
     border-opacity-20 py-12
 }
-.introLeft > img.arrow{
-    @apply absolute bottom-0 right-0
+
+.introLeft1{
+    @apply  bg-none relative
 }
-.introLeft{
-    @apply relative 
+.introLeft2{
+    @apply relative bg-[url('/purple.png')]  bg-left-top
 }
-.introLeft p{
+p.idea{
     transform: translate(-50%, -50%);
     @apply absolute top-1/2 right-[45%] w-[4rem] flex justify-center items-center text-center
 }
-.introRight {
-    @apply flex flex-col space-y-4
+.introRight1 {
+    @apply flex flex-col space-y-4 bg-none h-full justify-center
+
+}
+.introRight2{
+    @apply flex flex-col space-y-4 bg-[url('/purple.png')]  bg-center bg-cover h-full justify-center
+
 }
 .intoLeftContent{
     @apply flex flex-col 

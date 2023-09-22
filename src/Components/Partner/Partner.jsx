@@ -8,7 +8,9 @@ const Partner = () => {
         <p>Getlinked Hackathon 1.0 is honored to have the following major 
 companies as its partners and sponsors</p>
       </div>
-      <main className="partnerMain">
+      <main className="partnerMain relative overflow-hidden">
+        <img src="/purple.png" className='absolute bottom-[20%] -left-[50%] scale-[0.6]' alt="" />
+        <img src="/purple.png" className='absolute top-[20%] left-[50%] scale-[0.6]' alt="" />
         <div className="eachPartnerImg">
             <div className="imgW">
         <img src="img1.png" alt="" />

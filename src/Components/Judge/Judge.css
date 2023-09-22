@@ -1,6 +1,9 @@
 .judgeWrapper{
     @apply bg-primarybg py-12 grid grid-cols-2 px-20 items-center
 }
+.judgeLeft{
+    @apply bg-[url(purple.png)] bg-center bg-cover
+}
 .judgeRight{
     @apply flex flex-col space-y-5
 }

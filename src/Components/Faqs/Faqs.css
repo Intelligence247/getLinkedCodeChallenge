@@ -1,6 +1,6 @@
 .faqWrapper{
     @apply bg-primarybg py-12 grid grid-cols-2 px-20 items-center border-b-gray-50 border-b-[1px] 
-    border-opacity-20
+    border-opacity-20 relative
 
 }
 
@@ -23,7 +23,9 @@
 .allQ{
     @apply flex flex-col gap-10
 }
-
+.faqRight{
+    @apply relative bg-[url('/purple.png')] bg-left-bottom
+}
 .faqHeader p{
     @apply text-[2rem] leading-[2rem]
 }
@@ -32,4 +34,14 @@
 }
 
 
+.qWrapper{
+ 
+    @apply flex justify-between items-center w-[70%] m-auto lg:px-10 
 
+}
+.qWrapper p:first-child, .qWrapper p:last-child{
+    @apply opacity-70 scale-[0.9]
+}
+.qWrapper p:nth-child(2){
+    @apply -top-10 relative
+}

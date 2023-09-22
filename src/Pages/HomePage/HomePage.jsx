@@ -27,7 +27,8 @@ const HomePage = () => {
         txt2="Guidlines"
         img1="wom.png"
         arrowDisplay="hidden"
-        order='order-2'
+        order='introLeft2 order-2'
+        intro2="introRight2"
         />
         <Judge/>
         <Faqs/>

@@ -9,3 +9,16 @@ button{
   background: linear-gradient(90deg,#903AFF, #FE34B9);
   @apply w-[10rem] h-[3rem] rounded-lg flex justify-center items-center
 }
+
+*::selection{
+  @apply bg-primaryBlue text-white bg-opacity-30
+  }
+.body{
+  @apply min-h-[100vh] w-full bg-repeat bg-primaryBlue overflow-x-clip
+}
+body::-webkit-scrollbar{
+  @apply lg:w-[6px] bg-primaryPurple 
+}
+body::-webkit-scrollbar-thumb{
+  @apply bg-white rounded-full 
+}

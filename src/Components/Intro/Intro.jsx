@@ -3,12 +3,12 @@ import "./Intro.css"
 const Intro = (props) => {
   return (
     <div className='bg-primarybg introWrapper'>
-        <div className={`introLeft ${props.order}`}>
-        <img src="/arrow.png" className={`arrow ${props.arrowDisplay}` }  alt="arrow" />
-            <p>{props.display}</p>
+        <div className={`introLeft1 ${props.order}`}>
+        <img src="/arrow.png" className={`arrow absolute bottom-0 right-0 ${props.arrowDisplay}` }  alt="arrow" />
+            <p className='idea'>{props.display}</p>
             <img src={props.img1} alt="" />
       </div>
-      <div className="introRight">
+      <div className={`introRight1 ${props.intro2}`}>
 <div className='intoLeftContent '>
     <p>{props.txt1}</p>
 <p>{props.txt2}</p>

@@ -2,7 +2,7 @@
     @apply bg-primarybg py-12 grid grid-cols-2 px-20 items-center
 }
 .privacyLeft{
-    @apply p-4 flex-col flex space-y-8 justify-center items-center
+    @apply p-4 flex-col flex space-y-8 justify-center items-center 
 }
 
 .privacyHeader p{

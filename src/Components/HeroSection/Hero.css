@@ -15,7 +15,8 @@
     @apply flex justify-center items-center
 }
 .heroLeft{
-    @apply flex flex-col
+    @apply flex flex-col relative
+    /* bg-[url('/purple.png')] bg-bottom */
 }
 .heroLeft > p:first-child, .hack p{
     font-family: Clash Display;
@@ -25,10 +26,10 @@
     @apply font-bold text-primaryPurple
 }
 .heroLeft .hack{
-    @apply flex items-center relative z-[1]
+    @apply flex items-center relative 
 }
 .heroRight{
-    @apply relative z-[0]
+    @apply relative
 }
 
 .heroRight img:last-child{
