@@ -1,5 +1,5 @@
 .timelineWrapper{
-    @apply px-20 bg-primarybg py-12
+    @apply lg:px-20 px-4 bg-primarybg py-12
 }
 .timelineHeader {
     @apply flex-col flex m-auto justify-center items-center lg:w-[25rem] w-full text-center space-y-4

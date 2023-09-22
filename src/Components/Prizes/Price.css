@@ -1,5 +1,5 @@
 .priceWrapper{
-    @apply px-20 py-12 bg-primarybg lg:grid grid-cols-2 items-center justify-center
+    @apply lg:px-20 px-4 py-12 bg-primarybg lg:grid grid-cols-2 items-center justify-center
 }
 
 .awards{
@@ -11,7 +11,10 @@
     @apply flex flex-col space-y-8
 }
 
+.priceHeader{
+    @apply flex flex-col lg:space-y-3 space-y-2 lg:items-start items-center
 
+}
 .priceHeader p{
     @apply text-[2rem] leading-[2rem]
 }
