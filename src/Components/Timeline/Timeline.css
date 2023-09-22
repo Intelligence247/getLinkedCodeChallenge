@@ -1,0 +1,15 @@
+.timelineWrapper{
+    @apply px-20 bg-primarybg py-12
+}
+.timelineHeader {
+    @apply flex-col flex m-auto justify-center items-center lg:w-[25rem] w-full text-center space-y-4
+ }
+ .timelineHeader h1{
+    @apply text-[2rem]
+ }
+ .timelineContent{
+    @apply flex mt-20 justify-center items-center space-x-0 space-x-8
+ }
+ .timelineLeft,.timelineRight{
+    @apply w-[40%] flex-col flex space-y-[6rem]
+ }

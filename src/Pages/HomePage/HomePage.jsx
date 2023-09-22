@@ -5,6 +5,7 @@ import "./HomePage.css"
 import Intro from '../../Components/Intro/Intro'
 import Judge from '../../Components/Judge/Judge'
 import Faqs from '../../Components/Faqs/Faqs'
+import Timeline from '../../Components/Timeline/Timeline'
 const HomePage = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ const HomePage = () => {
         />
         <Judge/>
         <Faqs/>
+        <Timeline/>
         
     </div>
   )

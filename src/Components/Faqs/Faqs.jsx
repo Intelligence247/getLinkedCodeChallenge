@@ -1,11 +1,33 @@
 import React from 'react'
 import "./Faqs.css"
-import Questions from '../Questions'
+import Questions from './Questions'
 const Faqs = () => {
-    const QandA = [{
-        ques:'Can I work on a project I started before the hackathon?',
-        ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor dolores placeat",
-    }
+    const QandA = [
+        {
+            ques:'Can I work on a project I started before the hackathon?',
+            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor dolores placeat",
+        },
+        {
+            ques:'What happens if I need help during the hackathon?',
+            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor dolores placeat dolor sit amet consectetur adip",
+        },
+        {
+            ques:'What happens if I don\'t have an idea for a project?',
+            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor dolores placeat dolor sit amet consectetur adip",
+        },
+        {
+            ques:'Can I join a team or do I have to come with one?',
+            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor dolores placeat dolor sit amet consectetur adip",
+        },
+        {
+            ques:"What happens after the hackathon ends",
+            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor dolores placeat dolor sit amet consectetur adip",
+        },
+        {
+            ques:'Can I work on a project I started before the hackathon?',
+            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolor dolores placeat dolor sit amet consectetur adip",
+        },
+    
     ]
   return (
     <div className='faqWrapper'>
@@ -15,7 +37,7 @@ const Faqs = () => {
     <p>Question</p>
     
 </div>
-<p>We got answers to the questions that you might
+<p className='py-6'>We got answers to the questions that you might
 want to ask about getlinked Hackathon 1.0</p>
 <div className="allQ">
         {QandA.map((q, i) => (

@@ -1,5 +1,6 @@
 .faqWrapper{
-    @apply bg-primarybg py-12 grid grid-cols-2 px-20 items-center
+    @apply bg-primarybg py-12 grid grid-cols-2 px-20 items-center border-b-gray-50 border-b-[1px] 
+    border-opacity-20
 
 }
 
