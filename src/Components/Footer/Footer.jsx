@@ -42,8 +42,19 @@ const Footer = () => {
   </div>      
   </div>
   </div>
-      <div className="footertop"></div>
-    </div>
+      <div className="footerbottom">
+        <h1>Contact Us</h1>
+        <div className="phone">
+          <img src="/phone.png" alt="" />
+       <p>+234 6707653444</p>
+        </div>
+        <div className="phone">
+          <img src="/location.png" alt="" />
+       <p>+234 6707653444</p>
+        </div>
+        </div>
+      </div>
+      <div className='flex justify-center items-center w-full text-[12px]'>All rights reserved. © getlinked Ltd.</div>
     </div>
   )
 }
