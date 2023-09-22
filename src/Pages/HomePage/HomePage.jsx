@@ -7,6 +7,7 @@ import Judge from '../../Components/Judge/Judge'
 import Faqs from '../../Components/Faqs/Faqs'
 import Timeline from '../../Components/Timeline/Timeline'
 import Prices from '../../Components/Prizes/Prices'
+import Partner from '../../Components/Partner/Partner'
 const HomePage = () => {
   return (
     <div>
@@ -30,6 +31,7 @@ const HomePage = () => {
         <Faqs/>
         <Timeline/>
         <Prices/>
+        <Partner/>
         
     </div>
   )

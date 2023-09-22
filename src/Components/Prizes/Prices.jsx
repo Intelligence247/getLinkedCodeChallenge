@@ -12,28 +12,32 @@ const Prices = () => {
             <p>Price and</p>
             <p>Rewards</p>
         </div>
-        <p>Highlight of the prizes or rewards for winners and for Participants</p>
+        <h2 className='w-[20rem]'>Highlight of the prizes or rewards for winners and for Participants</h2>
         <div className="awards">
 <PrizeCrd 
 position={'2nd'}
 amount={'300,000'}
 img="/silver.png"
 style="border-primaryPurple border-2 "
+color={'text-primaryPurple'}
 
 />
 <PrizeCrd 
-position={'2nd'}
-amount={'300,000'}
+imgSize={'w-[35rem'}
+position={'1st'}
+amount={'400,000'}
 img="/gold.png"
 style="border-primaryBlue border-2 "
+color={'text-primaryBlue'}
 
 
 />
 <PrizeCrd 
-position={'2nd'}
-amount={'300,000'}
+position={'3rd'}
+amount={'150,000'}
 img="/bronze.png"
 style="border-primaryPurple"
+color={'text-primaryPurple'}
 
 />
 </div>

@@ -1,0 +1,31 @@
+.partnerWrapper{
+    @apply py-12 px-20 flex flex-col space-y-20 bg-primarybg border-b-gray-50 border-b-[1px] 
+    border-opacity-20
+}
+.partnerHeader{
+    @apply flex w-full justify-center items-center flex-col
+}
+.partnerHeader p{
+    @apply lg:w-[45%] w-full text-center
+}
+.partnerMain{
+    @apply flex flex-wrap lg:w-[50rem] w-full gap-6 m-auto justify-center items-center border-[1px] border-primaryPurple p-14
+}
+.eachPartnerImg{
+    @apply flex space-x-8
+}
+
+.imgW{
+@apply border-b-4 relative border-primaryPurple p-3 px-6 w-40 flex justify-center items-center
+ 
+}
+
+.imgW:nth-of-type(4),
+.imgW:nth-of-type(5),
+.imgW:nth-of-type(6){
+    @apply border-b-0 hidden
+}
+
+.eachPartnerImg .Line{
+@apply h-28 w-1 bg-primaryPurple
+}
