@@ -8,7 +8,15 @@
     @apply text-[2rem]
  }
  .timelineContent{
-    @apply  lg:flex mt-20 justify-center items-center space-x-8 hidden
+    @apply  mt-20
+ }
+ 
+ .desktopView{
+   @apply  lg:flex justify-center items-center space-x-8 hidden
+
+ }
+ .mobileView{
+   @apply flex-col space-y-4
  }
  .timelineLeft,.timelineRight{
     @apply w-[40%] flex-col flex space-y-[6rem]
