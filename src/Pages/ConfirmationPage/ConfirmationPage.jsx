@@ -8,7 +8,7 @@ const ConfirmationPage = () => {
      <div className=" lg:w-[35rem] lg:h-[30rem] w-full border-2 border-primaryPurple flex  flex-col justify-center items-center relative p-6 space-y-6">
       <div className="topConrimation">
       <img src="/jubilate.png" alt="" />
-      <img src="/markedSuc.png" className='absolute left-[22%] top-[14%]' alt="" />
+      <img src="/markedSuc.png" className='absolute lg:left-[22%] lg:top-[8%] top-[4%] -left-[5%]' alt="" />
      </div>
      <h1 className='lg:text-[2rem] lg:leading-[2rem] text-[20px] leading-[20px] font-bold text-center'>Congratulations<br/>
 you have successfully

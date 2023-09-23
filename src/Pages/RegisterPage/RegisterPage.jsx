@@ -32,27 +32,27 @@ const RegisterPage = () => {
         {/*  */}
         <div className="firstInput">
         <label htmlFor="">Team’s Name</label>
-        <input type="text" placeholder='Enter the name of your group'/>
+        <input required type="text" placeholder='Enter the name of your group'/>
         </div>
         {/*  */}
         <div className="firstInput">
         <label htmlFor="">Team’s Name</label>
-        <input type="text" placeholder='Enter the name of your group'/>
+        <input required type="text" placeholder='Enter the name of your group'/>
         </div>
         {/*  */}
         <div className="firstInput">
         <label htmlFor="">Team’s Name</label>
-        <input type="text" placeholder='Enter the name of your group'/>
+        <input required type="text" placeholder='Enter the name of your group'/>
         </div>
          {/*  */}
          <div className="firstInput">
         <label htmlFor="">Team’s Name</label>
-        <input type="text" placeholder='Enter the name of your group'/>
+        <input required type="text" placeholder='Enter the name of your group'/>
         </div>
         {/*  */}
         <div className="firstInput">
         <label htmlFor="">Team’s Name</label>
-        <input type="text" placeholder='Enter the name of your group'/>
+        <input required type="text" placeholder='Enter the name of your group'/>
         </div>
       </div>
       <div className="erroM">Please review your registration details before submitting</div>

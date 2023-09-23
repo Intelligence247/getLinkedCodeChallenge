@@ -49,7 +49,7 @@ companies as its partners and sponsors</p>
 
         <div className="eachPartnerImg">
             <div className="imgW border-0">
-                <p className='absolute bottom-[30%] text-[8px] right-0'>Design Studios</p>
+                <p className='absolute lg:bottom-[30%] bottom-[10%] lg:text-[8px] text-[3px] right-0'>Design Studios</p>
         <img src="img6.png" alt="" />
         </div>
         <p className='Line'></p>

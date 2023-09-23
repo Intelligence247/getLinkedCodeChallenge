@@ -5,7 +5,7 @@
   font-family: Montserrat;
   @apply p-0 m-0 box-border text-white transition-all ease-linear duration-[.3s] lg:text-base text-sm scroll-smooth
 }
-button{
+button, button[type="submit"]{
   background: linear-gradient(270deg,#903AFF, #FE34B9);
   @apply lg:w-[10rem] w-[8rem] h-[2.5rem] lg:h-[3rem] rounded-lg flex justify-center items-center lg:m-0 m-auto
 }

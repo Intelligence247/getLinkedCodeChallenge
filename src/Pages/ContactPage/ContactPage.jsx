@@ -1,9 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import "./ContactPage.css"
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { data } from 'autoprefixer'
 
 const ContactPage = () => {
+  const [email, setEmail] = useState('');
+  const [first_name, setFirst_name] = useState('');
+  const [message, setMessage] = useState('');
+
+  
+  const baseUrl = 'https://backend.getlinked.ai'
+  const url = `{${baseUrl}}/hackathon/contact-form`;
+  const url2 = 'https://jsonplaceholder.typicode.com/posts'
+  const url3 ='https://backend.getlinked.ai/hackathon/contact-form'
+  // https://backend.getlinked.ai/hackathon/contact-form
+  // https://backend.getlinked.ai/hackathon/contact-form
+  const rand= Math.random().toString(16).substr(2,6)
+  const date = Date()
+  console.log(date)
+  console.log(rand)
+  const obj =[ {
+    email: email,
+    first_name: first_name,
+    message: message,
+    date_created: date,
+    last_updated: date,
+  }]
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    obj.push({
+      email: email,
+      first_name: first_name,
+      message: message,
+      date_created: date,
+      last_updated: date,
+
+    })
+    try {
+      const resp = await axios.post(url, obj);
+      console.log(JSON.stringify(resp.data));
+      console.log('my answoe')
+    } catch (error) {
+      console.log(error )
+      console.log('my errpr')
+    }
+    // axios.post(url, obj)
+    // .then((response) =>{
+    //   console.log(response)
+    // })
+    // .catch(err =>{
+    //   console.log(err)
+    //   console.log('err is here')
+    // })
+
+  }
   return (
     <div className='contactWrapper'>
       <NavBar/>
@@ -44,22 +97,32 @@ Lagos State
 </div>
         </div>
 
-        <div className="Cright">
-          <Link className='border-[1px] border-primaryPurple w-8 h-8 rounded-full inline-block flex justify-center items-center lg:hidden'>
-          <img src="/back.png" alt="" />
-          </Link>
+        <form className="Cright" onSubmit={handleSubmit}>
+          <Link to={"/"} className='border-[1px] border-primaryPurple w-8 h-8 rounded-full inline-block flex justify-center items-center lg:hidden'>
+          <img src="/back.png" alt="" /></Link>
 
           <h1 className='lg:text-[1.5rem] lg:leading-[1.6rem] text-[20px] leading-[20px] text-primaryPurple '>Questions or need assistance?<br/>
           Let us know  about it!</h1>
           <p className='lg:hidden'>Email us below to any question related 
 to our event</p>
-          <input type="text" placeholder='First Name'/>
-          <input type="email" placeholder='Mail' />
-          <textarea id="myTextarea" name="comments" rows="4" cols="30">
+          <input type="text" placeholder='First Name'
+          value={first_name}
+          name='firstname'
+          onChange={(e)=> setFirst_name(e.target.value)}
+          />
+          <input type="email" placeholder='Mail'
+          value={email}
+          name='email'
+          onChange={(e)=>setEmail(e.target.value)}
+           />
+          <textarea id="myTextarea" name="comments" rows="4" cols="30"
+          value={message}
+          onInput={(e)=> setMessage(e.target.value)}
+          >
         Messages
     </textarea>
-    <button>Submit</button>
-        </div>
+    <button type='submit'>Submit</button>
+        </form>
       </div>
     </div>
   )

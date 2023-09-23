@@ -13,10 +13,10 @@
     @apply lg:text-[2rem] text-[20px] font-bold
 }
 .partnerMain{
-    @apply grid grid-cols-3 flex-wrap lg:w-[50rem] w-full lg:gap-6 gap-4 m-auto justify-center items-center border-[1px] border-primaryPurple lg:p-14 p-5 
+    @apply grid grid-cols-3 flex-wrap lg:w-[50rem] w-full lg:gap-6 gap-y-4 gap-x-0 m-auto justify-center items-center border-[1px] border-primaryPurple lg:p-14 p-5 
 }
 .eachPartnerImg{
-    @apply flex lg:space-x-8 space-x-4 
+    @apply flex lg:space-x-8 space-x-6
 }
 
 .imgW{

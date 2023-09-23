@@ -36,11 +36,15 @@ const NavBar = () => {
             navObj.map((n,i)=>(
            i==3?(
             <Link
+            key={i}
             onClick={()=> setactive(!active)}
              to={n.link} key={i}>{n.text}</Link>
        
             ):(
-              <a  href={n.link}>{n.text}</a>
+              <a
+              key={i} 
+            onClick={()=> setactive(!active)}
+               href={n.link}>{n.text}</a>
             )
             ))
         }
