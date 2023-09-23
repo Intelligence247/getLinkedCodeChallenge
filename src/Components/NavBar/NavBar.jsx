@@ -25,7 +25,7 @@ const NavBar = () => {
 ]
   return (
     <div className='navWraper'>
-      <div className="navLeft">get<span>linked</span></div>
+     <Link to="/"><div className="navLeft">get<span>linked</span></div></Link>
       <span className='flex-grow-[1]'></span>
       <div className={`navRight ${active?'navRightA':'navRight'}`}>
       <div

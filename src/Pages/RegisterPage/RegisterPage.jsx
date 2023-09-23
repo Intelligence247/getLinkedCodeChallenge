@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
+import { Link } from 'react-router-dom'
 import "./RegisterPage.css"
 const RegisterPage = () => {
   return (
@@ -59,7 +60,7 @@ const RegisterPage = () => {
       <input type="checkbox" name="" id="" />
       <p>I agreed with the event terms and conditions  and privacy policy</p>
       </div>
-<button className='w-full'>Register Now</button>
+<Link to="/confirmation"> <button className='w-full'>Register Now</button></Link>
      </div>
      </div>
     </div>
