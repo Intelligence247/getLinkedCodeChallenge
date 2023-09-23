@@ -55,7 +55,12 @@ const Timeline = () => {
 
   ]
   return (
-    <div className='timelineWrapper' id='timeline'>
+    <div className='timelineWrapper relative' id='timeline'>
+      <img src="starpurple.png" className='absolute lg:w-max w-[10px] left-[20%] top-[15%]  ' alt="" />
+      <img src="starwhite.png" className='absolute lg:w-max w-[10px] left-[90%] top-[50%]  ' alt="" />
+      <img src="stargray.png" className='absolute lg:w-max w-[10px] left-[10%] top-[90%]  ' alt="" />
+
+
       <div className="timelineHeader">
         <h1>Timeline</h1>
         <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>

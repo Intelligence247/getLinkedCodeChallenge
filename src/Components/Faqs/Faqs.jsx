@@ -48,7 +48,11 @@ want to ask about getlinked Hackathon 1.0</p>
         ))}
       </div>
       </div>
-      <div className="faqRight">
+      <div className="faqRight relative">
+      <img src="starpurple.png" className='absolute lg:w-max w-[10px] left-[20%] top-[40%]  ' alt="" />
+      <img src="starpurple.png" className='absolute lg:w-max w-[10px] left-[40%] top-[10%]  ' alt="" />
+      <img src="starwhite.png" className='absolute lg:w-max w-[10px] left-[90%] top-[90%]  ' alt="" />
+
 
         <QMark/>
 <img src="/Faqimg.png" alt="" />

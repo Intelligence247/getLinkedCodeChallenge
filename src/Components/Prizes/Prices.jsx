@@ -5,6 +5,10 @@ const Prices = () => {
   return (
     <div className='priceWrapper'>
       <div className="priceLeft relative lg:block hidden">
+      <img src="starpurple.png" className='left-[0%] top-[0%] absolute lg:w-max w-[10px]  ' alt="" />
+      <img src="starwhite.png" className='left-[20%] top-[100%] absolute w-[10px]  ' alt="" />
+
+
         <img src="/purple.png" className='absolute lg:left-[20%]' alt="" />
         <img src="/cup.png"  className='relative z-10' alt="" />
       </div>
@@ -16,6 +20,8 @@ const Prices = () => {
         </div>
        <h2 className='lg:w-[20rem] w-full lg:texrt-base text-sm lg:text-start text-center'>Highlight of the prizes or rewards for winners and for Participants</h2>
        <div className="priceLeft relative lg:hidden block">
+      <img src="starpurple.png" className='left-[0%] top-[0%] absolute lg:w-max w-[10px]  ' alt="" />
+      <img src="starwhite.png" className='left-[20%] top-[100%] absolute w-[10px]  ' alt="" />
         <img src="/purple.png" className='absolute left-0 -top-20' alt="" />
         <img src="/cup.png"  className='relative z-10' alt="" />
       </div>

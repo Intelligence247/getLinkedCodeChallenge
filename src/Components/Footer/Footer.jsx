@@ -4,9 +4,10 @@ const Footer = () => {
   return (
     <div className='footerWrapper'>
       <div className="footerWrapper2">
-      <div className="footertop">
+      <div className="footertop relative">
+      <img src="starwhite.png" className='-left-[10%] top-[20%] absolute lg:w-max w-[10px]  ' alt="" />
         <div className='flex space-y-2 flex-col'>
-      <div className="footerHeader">get<span>linked</span></div>
+      <div className="footerHeader">get<span className='lg:text-[2rem] text-[20px] '>linked</span></div>
       <p>Getlinked Tech Hackathon is a technology innovation program 
         established by a group of organisations with the aim of showcasing 
         young and talented individuals in the fielf of technology
@@ -18,7 +19,9 @@ const Footer = () => {
         <p>Privacy Policy</p>
       </div>
       </div>
-<div className="footercenter">
+<div className="footercenter relative">
+<img src="starpurple.png" className='lg:-left-[0%] -left-[7%] top-[100%] absolute lg:w-max w-[10px]  ' alt="" />
+
   <div className='footercenter2'> 
         <h1>Useful Links</h1>
         <p>Overview</p>
@@ -42,7 +45,11 @@ const Footer = () => {
   </div>      
   </div>
   </div>
-      <div className="footerbottom">
+      <div className="footerbottom relative">
+<img src="starpurple.png" className='lg:right-full right-[10%] -top-[10%] absolute lg:w-max w-[10px]  ' alt="" />
+<img src="stargray.png" className='left-full top-[100%] absolute lg:w-max w-[10px]  ' alt="" />
+
+
         <h1>Contact Us</h1>
         <div className="phone">
           <img src="/phone.png" alt="" />
