@@ -8,7 +8,7 @@
     @apply lg:text-4xl text-[20px] font-bold  
 }
 .navLeft span{
-    @apply text-primaryPurple
+    @apply text-primaryPurple lg:text-[2rem] text-[20px]
 }
 .navRight{
     @apply flex lg:flex-row flex-col lg:space-x-8 lg:space-y-0 space-y-8 lg:items-center lg:relative fixed top-0 lg:bg-transparent bg-[#150E28]

@@ -2,7 +2,7 @@ import React from 'react'
 import "./Partner.css"
 const Partner = () => {
   return (
-    <div className='partnerWrapper'>
+    <div className='partnerWrapper' id='overview'>
       <div className="partnerHeader">
         <h1>Partners and Sponsors</h1>
         <p>Getlinked Hackathon 1.0 is honored to have the following major 

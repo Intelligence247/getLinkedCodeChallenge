@@ -55,7 +55,7 @@ const Timeline = () => {
 
   ]
   return (
-    <div className='timelineWrapper'>
+    <div className='timelineWrapper' id='timeline'>
       <div className="timelineHeader">
         <h1>Timeline</h1>
         <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>

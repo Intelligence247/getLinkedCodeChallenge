@@ -31,7 +31,7 @@ const Faqs = () => {
     
     ]
   return (
-    <div className='faqWrapper'>
+    <div className='faqWrapper' id='faqs'>
       <div className="faqLeft">
 <div className="faqHeader">
     <p>Frequently Ask</p>

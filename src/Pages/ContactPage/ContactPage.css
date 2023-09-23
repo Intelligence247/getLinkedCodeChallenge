@@ -1,7 +1,7 @@
 .contactWrapper{
     @apply h-screen
 }
-.contactWrapper .navWraper{
+.contactWrapper .navWraper,.RegistrationWrapper1 .navWraper{
     @apply lg:h-20 h-0 overflow-y-hidden
 }
 .contactWrapper2{

@@ -1,0 +1,35 @@
+.registrationWrapper{
+    @apply grid-cols-1 lg:grid-cols-2 grid lg:pt-20 pt-14 lg:pb-14 pb-14
+}
+.registerRight{
+    @apply bg-[url('/purple.png')] lg:pr-20 lg:px-0 px-4 flex flex-col lg:space-y-6 space-y-4
+}
+.registerLeft{
+    @apply bg-[url('/purple.png')] lg:pl-20 pl-0 px-4 bg-cover bg-right-bottom flex justify-center
+
+}
+.firstInput input{
+border-radius: 4px;
+border: 1px solid #FFF;
+background: rgba(255, 255, 255, 0.03);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    @apply lg:w-[90%] w-full rounded-lg h-12 lg:pl-2 lg:m-0 m-auto inline-block
+}
+.inputs{
+    @apply grid lg:grid-cols-2 space-y-2 grid-cols-1
+}
+.firstInput{
+    @apply flex flex-col space-y-1 lg:items-start items-start
+}
+.registerRight h1{
+    @apply lg:text-[2rem] text-[20px] 
+}
+.registerRight h1:first-of-type{
+    @apply text-primaryPurple
+}
+.erroM{
+    @apply lg:text-[12px] text-[9px] text-[#FF26B9]
+}
+.agreed{
+    @apply flex items-baseline lg:space-x-4 space-x-3 text-sm
+}

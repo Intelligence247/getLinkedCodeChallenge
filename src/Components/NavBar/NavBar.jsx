@@ -6,15 +6,15 @@ const NavBar = () => {
     const navObj = [
         {
         text: 'Timeline',
-        link: '',
+        link: '/#timeline',
     },
     {
         text: 'Overview',
-        link: '',
+        link: '/#overview',
     },
     {
         text: 'FAQs',
-        link: '',
+        link: '/#faqs',
     },
     {
         text: 'Contact',
@@ -34,12 +34,17 @@ const NavBar = () => {
       </div>
         {
             navObj.map((n,i)=>(
+           i==3?(
             <Link
             onClick={()=> setactive(!active)}
              to={n.link} key={i}>{n.text}</Link>
+       
+            ):(
+              <a  href={n.link}>{n.text}</a>
+            )
             ))
         }
-        <button>Register</button>
+      <Link to="/register"><button>Register</button></Link>  
       </div>
       <div className="harmBurger"
       onClick={()=>setactive(!active)}
