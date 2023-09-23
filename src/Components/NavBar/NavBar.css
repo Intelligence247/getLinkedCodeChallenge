@@ -12,14 +12,17 @@
 }
 .navRight{
     @apply flex lg:flex-row flex-col lg:space-x-8 lg:space-y-0 space-y-8 lg:items-center lg:relative fixed top-0 lg:bg-transparent bg-[#150E28]
-    lg:w-max w-[70%] -right-0 lg:h-auto h-screen justify-center items-start pl-5 
+    lg:w-max w-[70%] -right-0 lg:h-auto h-screen justify-center items-start pl-[10%]
     
 }
 .navRightA{
     @apply lg:-right-0 -right-[70%] 
 }
-.navRight a {
-    @apply inline-block
+.navRight a:not(.navRight a:last-child) {
+    @apply inline-block hover:text-primaryPurple
+}
+.navRight a{
+    @apply lg:text-base text-[18px]
 }
  .harmBurger{
     @apply relative flex justify-center items-center lg:hidden

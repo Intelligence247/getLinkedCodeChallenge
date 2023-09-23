@@ -24,6 +24,9 @@
     @apply flex lg:justify-start items-baseline flex-col lg:space-y-4 space-y-2
 
 }
+.footercenter2 p{
+    @apply hover:underline
+}
 .footercenter2 h1,.footerbottom h1{
     @apply text-primaryPurple
 }

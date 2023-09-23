@@ -40,28 +40,38 @@ const RegisterPage = () => {
         </div>
         {/*  */}
         <div className="firstInput">
-        <label htmlFor="">Team’s Name</label>
-        <input required type="text" placeholder='Enter the name of your group'/>
+        <label htmlFor="">Phone</label>
+        <input required type="text" placeholder='Enter your phone number'/>
         </div>
         {/*  */}
         <div className="firstInput">
-        <label htmlFor="">Team’s Name</label>
-        <input required type="text" placeholder='Enter the name of your group'/>
+        <label htmlFor="">Email</label>
+        <input required type="text" placeholder='Enter your email address'/>
         </div>
         {/*  */}
         <div className="firstInput">
-        <label htmlFor="">Team’s Name</label>
-        <input required type="text" placeholder='Enter the name of your group'/>
+        <label htmlFor="">Project Topic</label>
+        <input required type="text" placeholder='What is your group project topic'/>
         </div>
          {/*  */}
          <div className="firstInput">
-        <label htmlFor="">Team’s Name</label>
-        <input required type="text" placeholder='Enter the name of your group'/>
+        <label htmlFor="">Category</label>
+        <select name="" id="">
+          <option value="">Select your category </option>
+          <option value="">First Category</option>
+          <option value="">Second Category</option>
+          <option value="">Third Category</option>
+        </select>
         </div>
         {/*  */}
         <div className="firstInput">
-        <label htmlFor="">Team’s Name</label>
-        <input required type="text" placeholder='Enter the name of your group'/>
+        <label htmlFor="">Group Size</label>
+        <select name="" id="">
+          <option value="">Select</option>
+          <option value="">10</option>
+          <option value="">50</option>
+          <option value="">100</option>
+        </select>
         </div>
       </div>
       <div className="erroM">Please review your registration details before submitting</div>

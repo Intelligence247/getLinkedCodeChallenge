@@ -38,7 +38,7 @@ const NavBar = () => {
             <Link
             key={i}
             onClick={()=> setactive(!active)}
-             to={n.link} key={i}>{n.text}</Link>
+             to={n.link}>{n.text}</Link>
        
             ):(
               <a

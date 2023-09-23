@@ -8,12 +8,15 @@
     @apply bg-[url('/purple.png')] lg:pl-20 pl-0 px-4 bg-cover bg-right-bottom flex justify-center
 
 }
-.firstInput input{
+.firstInput input, select{
 border-radius: 4px;
 border: 1px solid #FFF;
 background: rgba(255, 255, 255, 0.03);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     @apply lg:w-[90%] w-full rounded-lg h-12 lg:pl-2 lg:m-0 m-auto inline-block
+}
+select option{
+    @apply bg-primarybg
 }
 .inputs{
     @apply grid lg:grid-cols-2 space-y-2 grid-cols-1

@@ -17,6 +17,7 @@ const ContactPage = () => {
   const url3 ='https://backend.getlinked.ai/hackathon/contact-form'
   // https://backend.getlinked.ai/hackathon/contact-form
   // https://backend.getlinked.ai/hackathon/contact-form
+  const url4 ="https://backend.getlinked.ai/hackathon/contact-form"
   const rand= Math.random().toString(16).substr(2,6)
   const date = Date()
   console.log(date)
@@ -40,8 +41,8 @@ const ContactPage = () => {
 
     })
     try {
-      const resp = await axios.post(url, obj);
-      console.log(JSON.stringify(resp.data));
+      const resp = await axios.post(url4, obj);
+      console.log(resp)
       console.log('my answoe')
     } catch (error) {
       console.log(error )
