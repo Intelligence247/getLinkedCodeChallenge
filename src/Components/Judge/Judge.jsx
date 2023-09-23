@@ -36,14 +36,18 @@ const Judge = () => {
     },
 ]
   return (
-    <div className='judgeWrapper'>
-        <div className="judgeLeft">
-      <img src="/judgeImg.png" alt="" />
+    <div className='judgeWrapper relative'>
+        <div className="judgeLeft lg:w-[35rem] lg:h-[40rem] flex justify-center items-center relative">
+      <img src="starpurple.png" className='absolute lg:w-max w-[10px] right-[70%] top-[0%]  ' alt="" />
+      <img src="starwhite.png" className='absolute lg:w-max w-[10px] left-[90%] top-full  ' alt="" />
+     <img src="/judgeImg.png" className='relative z-10' alt="" />
+      <img src="/ellipse.png" className='absolute top-[10%]  left-[10%] lg:block hidden' alt="" />
       </div>
       <div className="judgeRight">
         <div className="judgeHeader">
             <p>Judging Criteria</p>
             <p>Key attributes</p>
+            <option value=""></option>
         </div>
 
             {judgeObj.map((j,i)=>(

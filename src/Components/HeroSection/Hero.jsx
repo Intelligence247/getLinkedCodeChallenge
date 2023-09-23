@@ -2,7 +2,9 @@ import React from 'react'
 import "./Hero.css"
 const Hero = () => {
   return (
-    <div className='heroWrapper'>
+    <div className='heroWrapper relative'>
+      <img src="/starwhite.png" className='absolute lg:w-max w-[10px] top-[30%] ' alt="" />
+      <img src="/stargray.png" className='absolute lg:w-max w-[10px] left-[50%] top-[20%] ' alt="" />
         <div className="ignite">
             <p>Igniting a Revolution in HR Innovation</p>
             <img src="Vector4.png" alt="" />
@@ -30,7 +32,9 @@ const Hero = () => {
     <p>00<sub>S</sub></p>
     </div>
       </div>
-      <div className="heroRight">
+      <div className="heroRight lg:mt-0 mt-10">
+      <img src="starwhite.png" className='absolute lg:w-max w-[10px] left-[20%] top-[0%]  ' alt="" />
+
         <img src="/glass.png" alt="" />
         <img src="/universe.png" alt="" />
       </div>

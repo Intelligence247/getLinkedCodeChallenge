@@ -32,7 +32,9 @@ const Faqs = () => {
     ]
   return (
     <div className='faqWrapper' id='faqs'>
-      <div className="faqLeft">
+      <div className="faqLeft relative">
+      <img src="starpurple.png" className='absolute lg:w-max w-[10px] left-[10%] lg:-top-[10%] -top-[5%]  ' alt="" />
+        
 <div className="faqHeader">
     <p>Frequently Ask</p>
     <p>Question</p>

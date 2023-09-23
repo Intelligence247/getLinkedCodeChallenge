@@ -4,12 +4,17 @@ const Intro = (props) => {
   return (
     <div className='bg-primarybg introWrapper'>
         <div className={`introLeft1 ${props.order}`}>
+
+      <img src="starpurple.png" className='absolute lg:w-max w-[10px] left-[0%] top-[0%]  ' alt="" />
+
             <p className='idea'>{props.display}</p>
             <img src={props.img1} alt="" />
         <img src="/arrow.png" className={`arrow lg:w-max w-[20px] lg:absolute  bottom-0 right-0 ${props.arrowDisplay}` }  alt="arrow" />
 
       </div>
-      <div className={`introRight1 ${props.intro2}`}>
+      <div className={`introRight1 ${props.intro2} relative`}>
+      <img src="starpurple.png" className='absolute lg:w-max w-[10px] right-[70%] top-[0%]  ' alt="" />
+
 <div className='intoLeftContent '>
     <p>{props.txt1}</p>
 <p>{props.txt2}</p>
