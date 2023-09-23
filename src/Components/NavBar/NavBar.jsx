@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./NavBar.css"
+import { Link } from 'react-router-dom';
 const NavBar = () => {
   const [active, setactive] = useState(true);
     const navObj = [
@@ -17,7 +18,7 @@ const NavBar = () => {
     },
     {
         text: 'Contact',
-        link: '',
+        link: '/contact',
     },
    
     
@@ -27,9 +28,15 @@ const NavBar = () => {
       <div className="navLeft">get<span>linked</span></div>
       <span className='flex-grow-[1]'></span>
       <div className={`navRight ${active?'navRightA':'navRight'}`}>
+      <div
+      onClick={()=>setactive(!active)}
+       className="overlay">
+      </div>
         {
             navObj.map((n,i)=>(
-            <a href={n.link} key={i}>{n.text}</a>
+            <Link
+            onClick={()=> setactive(!active)}
+             to={n.link} key={i}>{n.text}</Link>
             ))
         }
         <button>Register</button>
@@ -39,6 +46,7 @@ const NavBar = () => {
       >
        <img src={`${active?"/burgera.png":"/burgerx.png"}`} alt="" />
       </div>
+      
     </div>
   )
 }

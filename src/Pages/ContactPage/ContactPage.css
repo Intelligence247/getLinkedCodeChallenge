@@ -1,0 +1,38 @@
+.contactWrapper{
+    @apply h-screen
+}
+.contactWrapper .navWraper{
+    @apply lg:h-20 h-0 overflow-y-hidden
+}
+.contactWrapper2{
+    @apply pb-10 lg:mt-20 mt-0 lg:grid-cols-2 grid grid-cols-1 lg:px-20 px-4 place-content-center
+}
+.Cleft{
+    @apply flex flex-col space-y-6 justify-center items-center bg-[url(/purple.png)]
+    bg-bottom h-full lg:pt-20 lg:-order-10 order-2
+}
+.Cleft > h1{
+    @apply lg:text-[2rem] lg:leading-[2rem] text-[20px] leading-[20px] text-primaryPurple lg:block hidden
+}
+.Cleft p{
+    @apply w-48 lg:block hidden
+}
+.Csocio{
+    @apply  flex flex-col space-y-1 lg:w-48 w-full lg:justify-start lg:items-start items-center
+}
+.Csocio > h1{
+    @apply text-primaryPurple text-[20px] 
+}
+.Cright{
+    @apply flex-col space-y-8 pt-20 justify-center items-center order-1
+}
+.Cright input, textarea{
+    border-radius: 4px;
+border: 1px solid #FFF;
+background: rgba(255, 255, 255, 0.03);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    @apply w-[90%] rounded-lg h-12 pl-2 lg:m-0 m-auto inline-block
+}
+textarea{
+    @apply h-auto pl-3
+}

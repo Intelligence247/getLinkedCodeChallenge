@@ -11,12 +11,12 @@
     @apply text-primaryPurple
 }
 .navRight{
-    @apply flex lg:flex-row flex-col lg:space-x-8 lg:space-y-0 space-y-8 lg:items-center lg:relative fixed top-0 lg:bg-primarybg bg-[#150E28]
-    lg:w-max w-[70%] right-0 lg:h-auto h-screen justify-center items-start pl-5 
+    @apply flex lg:flex-row flex-col lg:space-x-8 lg:space-y-0 space-y-8 lg:items-center lg:relative fixed top-0 lg:bg-transparent bg-[#150E28]
+    lg:w-max w-[70%] -right-0 lg:h-auto h-screen justify-center items-start pl-5 
     
 }
 .navRightA{
-    @apply -right-[70%] 
+    @apply lg:-right-0 -right-[70%] 
 }
 .navRight a {
     @apply inline-block
@@ -26,4 +26,10 @@
  }
  .navWraper button{
     @apply m-0
+ }
+ .overlay{
+    @apply w-[30%] bg-primaryPurple left-0 h-screen z-30 top-0 fixed backdrop-blur-[10px] bg-opacity-10 lg:hidden
+ }
+ .navRightA .overlay{
+    @apply left-[100%]
  }
