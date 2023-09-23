@@ -61,7 +61,11 @@ const ContactPage = () => {
     <div className='contactWrapper'>
       <NavBar/>
       <div className="contactWrapper2">
-        <div className="Cleft">
+        <div className="Cleft relative">
+        <img src="starpurple.png" className='lg:left-[10%] left-[50%] top-[25%] absolute lg:w-max w-[10px]  ' alt="" />
+        <img src="starblue.png" className='left-[90%] top-[90%] absolute lg:w-max w-[0px]  ' alt="" />
+     
+
           <h1>Get in touch</h1>
 
           <div className="contactInfo">
@@ -97,7 +101,10 @@ Lagos State
 </div>
         </div>
 
-        <form className="Cright" onSubmit={handleSubmit}>
+        <form className="Cright relative" onSubmit={handleSubmit}>
+        <img src="stargray.png" className=' left-[85%] top-[5%] absolute lg:w-max w-[10px]  ' alt="" />
+        <img src="starwhite.png" className=' left-[90%] top-[100%] absolute lg:w-max w-[10px]  ' alt="" />
+
           <Link to={"/"} className='border-[1px] border-primaryPurple w-8 h-8 rounded-full inline-block flex justify-center items-center lg:hidden'>
           <img src="/back.png" alt="" /></Link>
 

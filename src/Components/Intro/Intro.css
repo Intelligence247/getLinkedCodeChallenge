@@ -11,8 +11,7 @@
     @apply relative bg-[url('/purple.png')]  bg-left-top
 }
 p.idea{
-    transform: translate(-50%, -50%);
-    @apply absolute top-1/2 right-[45%] w-[4rem] flex justify-center items-center text-center
+    @apply absolute top-1/2 w-[4rem] flex justify-center items-center text-center
 }
 .introRight1 {
     @apply flex flex-col space-y-4 bg-none h-full justify-center

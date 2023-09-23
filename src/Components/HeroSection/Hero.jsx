@@ -19,7 +19,7 @@ const Hero = () => {
 
 
 <div className="hack relative">
-    <p>Hackathon<span>1.0</span></p>
+    <p>Hackathon<span className=''>1.0</span></p>
     <img src="/chain.png" alt="chain logo" />
     <img src="fire.png" alt="fire logo" />
     </div>

@@ -8,10 +8,19 @@ const RegisterPage = () => {
      <NavBar/>
      <div className="registrationWrapper ">
       <h1 className='lg:hidden block text-[20px] text-primaryPurple px-4'>Register</h1>
-      <div className="registerLeft">
+      <div className="registerLeft relative">
+<img src="stargray.png" className='left-[10%] top-[100%] absolute lg:w-max w-[10px]  ' alt="" />
+<img src="starpurple.png" className='left-[10%] top-[10%] absolute lg:w-max w-[10px]  ' alt="" />
+<img src="starblue.png" className='left-[85%] top-[85%] absolute lg:w-max w-[10px]  ' alt="" />
+
+
+
         <img src="registerimg.png" alt="" />
       </div>
-     <div className="registerRight pt-20 ">
+     <div className="registerRight pt-20 pb-4 relative">
+<img src="starwhite.png" className='left-[85%] top-[100%] absolute w-[10px]  ' alt="" />
+<img src="stargray.png" className='left-[80%] bottom-[70%] absolute lg:w-max w-[10px]  ' alt="" />
+
       <h1>Register</h1>
       <div className="trek flex items-baseline space-x-2">
         <p>Be part of this movement!</p>

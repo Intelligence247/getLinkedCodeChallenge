@@ -15,7 +15,7 @@
     @apply flex justify-center items-center lg:flex-row flex-col
 }
 .heroLeft{
-    @apply flex flex-col relative bg-[url('/purple.png')]  bg-left-bottom
+    @apply flex flex-col relative bg-[url('/purple.png')]  bg-center bg-cover
     /* bg-[url('/purple.png')] bg-bottom */
 }
 .heroLeft > p:first-child, .hack p{
@@ -29,7 +29,7 @@
     @apply lg:w-max w-[2rem] 
 }
 .hack p span{
-    @apply font-bold text-primaryPurple
+    @apply font-bold text-primaryPurple lg:text-7xl text-[37px] lg:leading-[4.5rem] leading-[2.5rem]
 }
 .heroLeft .hack{
     @apply flex items-center relative 

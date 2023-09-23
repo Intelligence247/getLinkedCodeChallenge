@@ -20,6 +20,7 @@ const HomePage = () => {
         txt1="Introduction to getlinked"
         txt2="tech Hackathon1.0"
         img1="/bulb.png"
+        order="lg:w-[35rem] lg:h-[40rem]"
         />
         <Intro
         display=""
