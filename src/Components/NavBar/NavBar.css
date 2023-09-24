@@ -11,7 +11,7 @@
     @apply text-primaryPurple lg:text-[2rem] text-[20px]
 }
 .navRight{
-    @apply flex lg:flex-row flex-col lg:space-x-8 lg:space-y-0 space-y-8 lg:items-center lg:relative fixed top-0 lg:bg-transparent bg-[#150E28]
+    @apply flex lg:flex-row flex-col lg:space-x-8 lg:space-y-0 space-y-10 lg:items-center lg:relative fixed top-0 lg:bg-transparent bg-[#150E28]
     lg:w-max w-[70%] -right-0 lg:h-auto h-screen justify-center items-start pl-[10%]
     
 }
