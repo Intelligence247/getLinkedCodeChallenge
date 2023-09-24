@@ -10,11 +10,6 @@ function App() {
   const baseUrl = "https://backend.getlinked.ai"
 const url = `${{baseUrl}}/hackathon/categories-list`
   
-axios.get(url).then((response)=>{
-  console.log(response)
-}).catch((error)=>{
-  console.log(error)
-})
   return (
     <div className='App'>
 <Router>

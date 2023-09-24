@@ -1,6 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Hero.css"
+import { Link } from 'react-router-dom';
 const Hero = () => {
+  
+    // Set the deadline date for the countdown (change this to your desired deadline)
+    const deadline = new Date("2023-09-26T12:00:00").getTime();
+    const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+  
+    function calculateTimeRemaining() {
+      const now = new Date().getTime();
+      return Math.max(0, deadline - now); // Ensure the countdown doesn't go negative
+    }
+  
+    useEffect(() => {
+      const countdown = setInterval(() => {
+        const remainingTime = calculateTimeRemaining();
+        setTimeRemaining(remainingTime);
+  
+        if (remainingTime <= 0) {
+          clearInterval(countdown);
+        }
+      }, 1000);
+  
+      // Clean up the interval on unmount
+      return () => clearInterval(countdown);
+    }, []);
+  
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    const hours2 = hours >9? hours : '0'+hours
+    const minutes2 = minutes >9? minutes : '0'+minutes
+    const seconds2 = seconds >9? seconds : '0'+seconds
   return (
     <div className='heroWrapper relative'>
       <img src="/starwhite.png" className='absolute lg:w-max w-[10px] top-[30%] ' alt="" />
@@ -25,11 +56,11 @@ const Hero = () => {
     </div>
 
     <p className='lg:text-xl text-sm lg:text-start text-center lg:w-max w-[90%] lg:m-0 m-auto'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
-    <button>Register</button>
+    <Link to="/register"><button>Register</button></Link>
     <div className="time">
-    <p>00<sub>H</sub></p>
-    <p>00<sub>M</sub></p>
-    <p>00<sub>S</sub></p>
+    <p>{hours2}<sub>H</sub></p>
+    <p>{minutes2}<sub>M</sub></p>
+    <p>{seconds2}<sub>S</sub></p>
     </div>
       </div>
       <div className="heroRight lg:mt-0 mt-10">

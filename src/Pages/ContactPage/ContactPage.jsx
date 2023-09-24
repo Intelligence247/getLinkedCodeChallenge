@@ -8,45 +8,39 @@ import { data } from 'autoprefixer'
 const ContactPage = () => {
   const [email, setEmail] = useState('');
   const [first_name, setFirst_name] = useState('');
-  const [message, setMessage] = useState('');
-
+  const [message, setMessage] = useState(''); 
+  const [success, setsuccess] = useState(false);
+  const [loading, setloading] = useState(false);
   
-  const baseUrl = 'https://backend.getlinked.ai'
-  const url = `{${baseUrl}}/hackathon/contact-form`;
-  const url2 = 'https://jsonplaceholder.typicode.com/posts'
-  const url3 ='https://backend.getlinked.ai/hackathon/contact-form'
-  // https://backend.getlinked.ai/hackathon/contact-form
-  // https://backend.getlinked.ai/hackathon/contact-form
+  const baseUrl = "https://backend.getlinked.ai";
+  const url = `${baseUrl}/hackathon/contact-form`;
   const url4 ="https://backend.getlinked.ai/hackathon/contact-form"
   const rand= Math.random().toString(16).substr(2,6)
   const date = Date()
-  console.log(date)
-  console.log(rand)
-  const obj =[ {
-    email: email,
-    first_name: first_name,
-    message: message,
-    date_created: date,
-    last_updated: date,
-  }]
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    obj.push({
+    const config = { "content-type": "application/json" };
+    const obj = {
       email: email,
       first_name: first_name,
       message: message,
       date_created: date,
       last_updated: date,
 
-    })
+    }
     try {
-      const resp = await axios.post(url4, obj);
+      const resp = await axios.post(url4, obj, config);
       console.log(resp)
       console.log('my answoe')
+      alert("Your message has been succesfully sent")
+      setloading(true)
+
     } catch (error) {
       console.log(error )
       console.log('my errpr')
+      setloading(false)
+    }finally{
+      setloading(false)
     }
     // axios.post(url, obj)
     // .then((response) =>{
@@ -75,7 +69,7 @@ const ContactPage = () => {
           </div>
           <p className="location">
           27,Alara Street
-Yaba 100012
+ Yaba 100012
 Lagos State
           </p>
           <p>Call Us : 07067981819</p>
@@ -113,17 +107,17 @@ Lagos State
           Let us know  about it!</h1>
           <p className='lg:hidden'>Email us below to any question related 
 to our event</p>
-          <input type="text" placeholder='First Name'
+          <input type="text" placeholder='First Name' required
           value={first_name}
           name='firstname'
           onChange={(e)=> setFirst_name(e.target.value)}
           />
-          <input type="email" placeholder='Mail'
+          <input type="email" placeholder='Mail' required
           value={email}
           name='email'
           onChange={(e)=>setEmail(e.target.value)}
            />
-          <textarea id="myTextarea" name="comments" rows="4" cols="30"
+          <textarea id="myTextarea" name="comments" rows="4" cols="30" required
           value={message}
           onInput={(e)=> setMessage(e.target.value)}
           >
