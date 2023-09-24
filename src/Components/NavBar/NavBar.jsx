@@ -1,8 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./NavBar.css"
 import { Link } from 'react-router-dom';
 const NavBar = () => {
   const [active, setactive] = useState(true);
+  const [Visible, setVisible] = useState(false);
+  useEffect(() => {
+    let prevS = window.pageYOffset;
+    window.addEventListener('scroll', ()=>{
+  let currenSc = pageYOffset;
+  prevS > currenSc ? setVisible(false) : setVisible(true)
+  prevS = currenSc;
+    })
+  }, [])
     const navObj = [
         {
         text: 'Timeline',
@@ -24,7 +33,7 @@ const NavBar = () => {
     
 ]
   return (
-    <div className='navWraper'>
+    <div className={`navWraper ${!Visible?"top-0": 'top-[-5rem]'}`}  >
      <Link to="/"><div className="navLeft">get<span>linked</span></div></Link>
       <span className='flex-grow-[1]'></span>
       <div className={`navRight ${active?'navRightA':'navRight'}`}>

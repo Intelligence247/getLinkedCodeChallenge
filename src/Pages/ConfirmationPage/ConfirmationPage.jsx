@@ -21,7 +21,7 @@ you have successfully
  Registered!</h1>
  <p className='lg:leading-[28px] leading-[20px]'>Yes, it was easy and you did it!<br/>
 check your mail box for next step</p>
-<Link to="/register">
+<Link to="/">
 <button>Back</button>
 </Link>
 </div>

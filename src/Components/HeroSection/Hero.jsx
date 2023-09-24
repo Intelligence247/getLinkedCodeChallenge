@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   
     // Set the deadline date for the countdown (change this to your desired deadline)
-    const deadline = new Date("2023-09-26T12:00:00").getTime();
+    const deadline = new Date("2023-09-30T24:00:00").getTime();
     const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
   
     function calculateTimeRemaining() {
@@ -35,7 +35,7 @@ const Hero = () => {
   return (
     <div className='heroWrapper relative'>
       <img src="/starwhite.png" className='absolute lg:w-max w-[10px] top-[30%] ' alt="" />
-      <img src="/stargray.png" className='absolute lg:w-max w-[10px] left-[50%] top-[20%] ' alt="" />
+      <img src="/stargray.png" className='absolute lg:w-max w-[10px] left-[40%] top-[20%] ' alt="" />
         <div className="ignite">
             <p>Igniting a Revolution in HR Innovation</p>
             <img src="Vector4.png" alt="" />

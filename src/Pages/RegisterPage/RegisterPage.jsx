@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import { Link } from 'react-router-dom'
 import "./RegisterPage.css"
+import { Audio } from 'react-loader-spinner'
 const RegisterPage = () => {
+  const [load, setload] = useState(false);
+  const [go, setgo] = useState(true);
+  useEffect(() => {
+    const timeover= setTimeout(() => {
+      setload(false)
+    }, 2000);
+     
+
+       return () => {
+         clearTimeout(timeover)
+         setgo(false)
+
+       }
+     }, [load])
   return (
     <div className='RegistrationWrapper1'>
-     <NavBar/>
+         <NavBar/>
      <div className="registrationWrapper ">
       <h1 className='lg:hidden block text-[20px] text-primaryPurple px-4'>Register</h1>
       <div className="registerLeft relative">
@@ -18,6 +33,7 @@ const RegisterPage = () => {
         <img src="registerimg.png" alt="" />
       </div>
      <div className="registerRight pt-20 pb-4 relative">
+    
 <img src="starwhite.png" className='left-[85%] top-[100%] absolute w-[10px]  ' alt="" />
 <img src="stargray.png" className='left-[80%] bottom-[70%] absolute lg:w-max w-[10px]  ' alt="" />
 
@@ -79,7 +95,16 @@ const RegisterPage = () => {
       <input type="checkbox" name="" id="" />
       <p>I agreed with the event terms and conditions  and privacy policy</p>
       </div>
-<Link to="/confirmation"> <button className='w-full'>Register Now</button></Link>
+      <div className={`load w-full flex justify-center items-center ${load?"block":'hidden'}`}>
+    <Audio
+    color='#D434FE'
+    height={50}
+    width={50}
+    />
+      </div>
+<Link to={"/confirmation"}
+onClick={()=>setload(!load)}
+> <button className='w-full'>Register Now</button></Link>
      </div>
      </div>
     </div>

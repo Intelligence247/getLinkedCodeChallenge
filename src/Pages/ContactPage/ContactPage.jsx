@@ -1,17 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import "./ContactPage.css"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { data } from 'autoprefixer'
-
+import { Audio } from 'react-loader-spinner'
 const ContactPage = () => {
   const [email, setEmail] = useState('');
   const [first_name, setFirst_name] = useState('');
   const [message, setMessage] = useState(''); 
   const [success, setsuccess] = useState(false);
-  const [loading, setloading] = useState(false);
-  
+  const [load, setload] = useState(false);
+  useEffect(() => {
+    const timeover= setTimeout(() => {
+      setload(false)
+    }, 4000);
+     
+
+       return () => {
+         clearTimeout(timeover)
+
+       }
+     }, [load])
+
+
   const baseUrl = "https://backend.getlinked.ai";
   const url = `${baseUrl}/hackathon/contact-form`;
   const url4 ="https://backend.getlinked.ai/hackathon/contact-form"
@@ -33,14 +45,15 @@ const ContactPage = () => {
       console.log(resp)
       console.log('my answoe')
       alert("Your message has been succesfully sent")
-      setloading(true)
+      setload(!load)
 
     } catch (error) {
       console.log(error )
       console.log('my errpr')
-      setloading(false)
+      alert("Make sure you enter all and check your network")
+      setload(false)
     }finally{
-      setloading(false)
+      setload(!load)
     }
     // axios.post(url, obj)
     // .then((response) =>{
@@ -123,7 +136,16 @@ to our event</p>
           >
         Messages
     </textarea>
-    <button type='submit'>Submit</button>
+    <div className={`load w-full flex justify-center items-center ${load?"block":'hidden'}`}>
+    <Audio
+    color='#D434FE'
+    height={50}
+    width={50}
+    />
+      </div>
+    <button type='submit'
+    onClick={()=> setload(!load)}
+    >Submit</button>
         </form>
       </div>
     </div>
