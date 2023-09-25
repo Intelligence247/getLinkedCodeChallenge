@@ -24,20 +24,6 @@ const RegisterPage = () => {
 
 
 
-  useEffect(() => {
-    const timeover= setTimeout(() => {
-      setload(false)
-    }, 200);
-     
-
-       return () => {
-         clearTimeout(timeover)
-
-       }
-     }, [load])
-
-     
-
 const getCategory = async (e) => {
 try {
 
@@ -70,11 +56,15 @@ try {
   console.log(resp)
   alert("succesfully Registered")
   setdone(true)
+  setload(false)
 
 } catch (error) {
   console.log(error+"Register Post Error is here")
   alert("Registered Error")
+  setload(false)
 
+}finally{
+  setload(false)
 }
 }
 
@@ -166,7 +156,7 @@ try {
           {
             options.length !== 0? (
               options.map((o, i)=> (
-          <option key={i} id={o.id} value={o.name}>{o.name}</option>
+          <option key={i} id={o.id} value={o.id}>{o.name}</option>
 
               ))
             ):''
@@ -202,6 +192,7 @@ onClick={(e)=> setchecked(!checked)}
 <Link to={done && checked ?"/confirmation": ''}
 onClick={()=>{
   checked?'':alert("You must accept terms and conditions")
+  setload(true)
 }}
 > <button className='w-full'>Register Now</button></Link>
      </div>
