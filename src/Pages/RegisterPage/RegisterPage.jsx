@@ -13,22 +13,21 @@ const RegisterPage = () => {
   const [size, setsize] = useState('');
   const [topic, settopic] = useState('');
   const [category, setcategory] = useState('');
-  const [checked, setchecked] = useState('');
+  const [checked, setchecked] = useState(false);
+  const [done, setdone] = useState(false);
 
-  const data = {
-    email: email,
-  phone_number: phone,
-  team_name: team,
-  group_size: size,
-  project_topic: topic,
-  category: category,
-  privacy_poclicy_accepted: checked,
-  }
+  const baseUrl = "https://backend.getlinked.ai";
+  const url4 ="https://backend.getlinked.ai/hackathon/contact-form"
+  const url = `${baseUrl}/hackathon/categories-list`
+  const registerUrl = `${baseUrl}/hackathon/registration`
+
+
+
 
   useEffect(() => {
     const timeover= setTimeout(() => {
       setload(false)
-    }, 2000);
+    }, 200);
      
 
        return () => {
@@ -37,9 +36,7 @@ const RegisterPage = () => {
        }
      }, [load])
 
-     let baseUrl = "https://backend.getlinked.ai";
-     const url = `${baseUrl}/hackathon/categories-list`
-
+     
 
 const getCategory = async (e) => {
 try {
@@ -56,9 +53,34 @@ try {
 }     
 }
 
+const register = async (e) => {
+  e.preventDefault()
+  const data = {
+    email: email,
+  phone_number: phone,
+  team_name: team,
+  group_size: size,
+  project_topic: topic,
+  category: category,
+  privacy_poclicy_accepted: checked,
+  }
+try {
+ 
+  const resp = await axios.post(registerUrl, data);
+  console.log(resp)
+  alert("succesfully Registered")
+  setdone(true)
+
+} catch (error) {
+  console.log(error+"Register Post Error is here")
+  alert("Registered Error")
+
+}
+}
 
      useEffect(() => {
         getCategory()
+        register()
      }, []);
      
 
@@ -93,30 +115,54 @@ try {
         </div>
       </div>
       <h1>CREATE YOUR ACCOUNT</h1>
-      <div className="inputs">
+      <form className="inputs" onSubmit={register}>
         <div className="firstInput">
         <label htmlFor="">Team’s Name</label>
-        <input type="text" placeholder='Enter the name of your group'/>
+        <input
+        value={team}
+        onChange={(e)=> setteam(e.target.value)
+        }
+        required
+         type="text" placeholder='Enter the name of your group'/>
+
         </div>
         {/*  */}
         <div className="firstInput">
         <label htmlFor="">Phone</label>
-        <input required type="text" placeholder='Enter your phone number'/>
+        <input
+        type="number"
+        value={phone}
+        
+        onChange={(e)=> setphone(e.target.value)
+
+        } required placeholder='Enter your phone number'/>
         </div>
         {/*  */}
         <div className="firstInput">
         <label htmlFor="">Email</label>
-        <input required type="text" placeholder='Enter your email address'/>
+        <input
+        value={email}
+        
+        onChange={(e)=> setemail(e.target.value)
+
+        } required type="email" placeholder='Enter your email address'/>
         </div>
         {/*  */}
         <div className="firstInput">
         <label htmlFor="">Project Topic</label>
-        <input required type="text" placeholder='What is your group project topic'/>
+        <input
+        value={topic}
+        
+        onChange={(e)=> settopic(e.target.value)
+
+        } required type="text" placeholder='What is your group project topic'/>
         </div>
          {/*  */}
          <div className="firstInput">
         <label htmlFor="">Category</label>
-        <select name="" id="">
+        <select name="" 
+        onChange={(e)=>setcategory(e.target.value)}
+         id="">
           {
             options.length !== 0? (
               options.map((o, i)=> (
@@ -131,17 +177,19 @@ try {
         {/*  */}
         <div className="firstInput">
         <label htmlFor="">Group Size</label>
-        <select name="" id="">
-          <option value="">Select</option>
-          <option value="">10</option>
-          <option value="">50</option>
-          <option value="">100</option>
+        <select value={size} onChange={(e)=> setsize(e.target.value)} id="">
+          <option value={"select"}>Select</option>
+          <option value="10">10</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
         </select>
         </div>
-      </div>
+      </form>
       <div className="erroM">Please review your registration details before submitting</div>
       <div className="agreed">
-      <input type="checkbox" name="" id="" />
+      <input
+onClick={(e)=> setchecked(!checked)}
+ type="checkbox" name="" id="" />
       <p>I agreed with the event terms and conditions  and privacy policy</p>
       </div>
       <div className={`load w-full flex justify-center items-center ${load?"block":'hidden'}`}>
@@ -151,8 +199,10 @@ try {
     width={50}
     />
       </div>
-<Link to={"/confirmation"}
-onClick={()=>setload(!load)}
+<Link to={done && checked ?"/confirmation": ''}
+onClick={()=>{
+  checked?'':alert("You must accept terms and conditions")
+}}
 > <button className='w-full'>Register Now</button></Link>
      </div>
      </div>

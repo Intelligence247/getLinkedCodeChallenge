@@ -11,22 +11,21 @@ const ContactPage = () => {
   const [message, setMessage] = useState(''); 
   const [success, setsuccess] = useState(false);
   const [load, setload] = useState(false);
-  useEffect(() => {
-    const timeover= setTimeout(() => {
-      setload(false)
-    }, 4000);
+  // useEffect(() => {
+  //   const timeover= setTimeout(() => {
+  //     setload(false)
+  //   }, 200);
      
 
-       return () => {
-         clearTimeout(timeover)
+  //      return () => {
+  //        clearTimeout(timeover)
 
-       }
-     }, [load])
+  //      }
+  //    }, [load])
 
 
   const baseUrl = "https://backend.getlinked.ai";
   const url = `${baseUrl}/hackathon/contact-form`;
-  const url4 ="https://backend.getlinked.ai/hackathon/contact-form"
   const rand= Math.random().toString(16).substr(2,6)
   const date = Date()
   const handleSubmit = async (e) => {
@@ -41,19 +40,20 @@ const ContactPage = () => {
 
     }
     try {
-      const resp = await axios.post(url, obj, config);
+      const resp = await axios.post(url, obj);
       console.log(resp)
       console.log('my answoe')
       alert("Your message has been succesfully sent")
-      setload(!load)
+      setload(false)
 
     } catch (error) {
-      console.log(error )
-      console.log('my errpr')
       alert("Make sure you enter all and check your network")
       setload(false)
     }finally{
       setload(!load)
+      setEmail('')
+      setMessage('')
+      setFirst_name('')
     }
    
   }
@@ -139,7 +139,7 @@ to our event</p>
     />
       </div>
     <button type='submit'
-    onClick={()=> setload(!load)}
+    onClick={()=> setload(true)}
     >Submit</button>
         </form>
       </div>
