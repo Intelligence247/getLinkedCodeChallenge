@@ -41,7 +41,7 @@ const ContactPage = () => {
 
     }
     try {
-      const resp = await axios.post(url4, obj, config);
+      const resp = await axios.post(url, obj, config);
       console.log(resp)
       console.log('my answoe')
       alert("Your message has been succesfully sent")
@@ -55,16 +55,11 @@ const ContactPage = () => {
     }finally{
       setload(!load)
     }
-    // axios.post(url, obj)
-    // .then((response) =>{
-    //   console.log(response)
-    // })
-    // .catch(err =>{
-    //   console.log(err)
-    //   console.log('err is here')
-    // })
-
+   
   }
+  useEffect(() => {
+  handleSubmit()
+  }, []);
   return (
     <div className='contactWrapper'>
       <NavBar/>

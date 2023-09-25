@@ -21,7 +21,6 @@ const Hero = () => {
           clearInterval(countdown);
         }
       }, 1000);
-  
       // Clean up the interval on unmount
       return () => clearInterval(countdown);
     }, []);

@@ -3,9 +3,28 @@ import NavBar from '../../Components/NavBar/NavBar'
 import { Link } from 'react-router-dom'
 import "./RegisterPage.css"
 import { Audio } from 'react-loader-spinner'
+import axios from 'axios'
 const RegisterPage = () => {
   const [load, setload] = useState(false);
-  const [go, setgo] = useState(true);
+  const [options, setOptions] = useState([]);
+  const [email, setemail] = useState('');
+  const [phone, setphone] = useState('');
+  const [team, setteam] = useState('');
+  const [size, setsize] = useState('');
+  const [topic, settopic] = useState('');
+  const [category, setcategory] = useState('');
+  const [checked, setchecked] = useState('');
+
+  const data = {
+    email: email,
+  phone_number: phone,
+  team_name: team,
+  group_size: size,
+  project_topic: topic,
+  category: category,
+  privacy_poclicy_accepted: checked,
+  }
+
   useEffect(() => {
     const timeover= setTimeout(() => {
       setload(false)
@@ -14,10 +33,35 @@ const RegisterPage = () => {
 
        return () => {
          clearTimeout(timeover)
-         setgo(false)
 
        }
      }, [load])
+
+     let baseUrl = "https://backend.getlinked.ai";
+     const url = `${baseUrl}/hackathon/categories-list`
+
+
+const getCategory = async (e) => {
+try {
+
+  const response = axios.get(url)
+  .then(response=>{
+    setOptions(response.data)
+    console.log(options)
+
+  })
+  
+} catch (error) {
+  console.log(error)
+}     
+}
+
+
+     useEffect(() => {
+        getCategory()
+     }, []);
+     
+
   return (
     <div className='RegistrationWrapper1'>
          <NavBar/>
@@ -73,10 +117,15 @@ const RegisterPage = () => {
          <div className="firstInput">
         <label htmlFor="">Category</label>
         <select name="" id="">
-          <option value="">Select your category </option>
-          <option value="">First Category</option>
-          <option value="">Second Category</option>
-          <option value="">Third Category</option>
+          {
+            options.length !== 0? (
+              options.map((o, i)=> (
+          <option key={i} id={o.id} value={o.name}>{o.name}</option>
+
+              ))
+            ):''
+          }
+         
         </select>
         </div>
         {/*  */}
