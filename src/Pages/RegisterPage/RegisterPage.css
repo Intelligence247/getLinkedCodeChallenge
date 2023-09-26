@@ -22,7 +22,7 @@ select option{
     @apply grid lg:grid-cols-2 gap-y-2 grid-cols-1
 }
 .firstInput{
-    @apply flex flex-col space-y-1 lg:items-start items-start
+    @apply flex flex-col space-y-1 lg:items-start items-start 
 }
 .registerRight h1{
     @apply lg:text-[2rem] text-[20px] 

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import "./RegisterPage.css"
 import { Audio } from 'react-loader-spinner'
 import axios from 'axios'
+import ConfirmationPage from '../ConfirmationPage/ConfirmationPage'
 const RegisterPage = () => {
   const [load, setload] = useState(false);
   const [options, setOptions] = useState([]);
@@ -17,12 +18,15 @@ const RegisterPage = () => {
   const [done, setdone] = useState(false);
 
   const baseUrl = "https://backend.getlinked.ai";
-  const url4 ="https://backend.getlinked.ai/hackathon/contact-form"
+  const url4 ="https://backend.getlinked.ai/hackathon/contact-div"
   const url = `${baseUrl}/hackathon/categories-list`
   const registerUrl = `${baseUrl}/hackathon/registration`
 
-
-
+const law = email.length !== 0 && phone !== 0 
+            && team.length !== 0 && size !== ''
+            && topic.length !== 0 && checked !== false
+            
+console.log(law)
 
 const getCategory = async (e) => {
 try {
@@ -41,7 +45,9 @@ try {
 
 const register = async (e) => {
   e.preventDefault()
-  const data = {
+  const config = { "content-type": "application/json" };
+
+  const obj = {
     email: email,
   phone_number: phone,
   team_name: team,
@@ -51,20 +57,36 @@ const register = async (e) => {
   privacy_poclicy_accepted: checked,
   }
 try {
- 
-  const resp = await axios.post(registerUrl, data);
+ setload(true)
+  var configs = {
+    method: 'post',
+  maxBodyLength: Infinity,
+    url: `${baseUrl}/hackathon/registration`,
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data : obj
+  };
+  const resp = await axios(configs);
   console.log(resp)
-  alert("succesfully Registered")
+  console.log(`Sucessfully registered`)
+  setdone(true)
   setdone(true)
   setload(false)
+  setemail('')
+  setphone('')
+  setteam('')
+  setsize('')
+  settopic('')
+  setcategory('')
+  setchecked(false)
 
 } catch (error) {
   console.log(error+"Register Post Error is here")
-  alert("Registered Error")
   setload(false)
 
 }finally{
-  setload(false)
+
 }
 }
 
@@ -73,11 +95,25 @@ try {
         register()
      }, []);
      
-
   return (
-    <div className='RegistrationWrapper1'>
-         <NavBar/>
-     <div className="registrationWrapper ">
+    <div className='RegistrationWrapper'>
+
+  {
+    options.length == 0 ? (
+      <div className='w-full h-screen flex justify-center items-center'>
+        <Audio
+    color='#D434FE'
+    height={90}
+    width={90}
+    />
+      </div>
+    ):(
+    <form className={`RegistrationWrapper`} onSubmit={register}>
+<ConfirmationPage
+height={`${done? 'h-screen':'h-0'} overflow-hidden`}
+ />
+       {done?"":  <NavBar/>}
+     <div className={`registrationWrapper  ${done?"h-0 overflow-hidden":'h-screen'}`}>
       <h1 className='lg:hidden block text-[20px] text-primaryPurple px-4'>Register</h1>
       <div className="registerLeft relative">
 <img src="stargray.png" className='left-[10%] top-[100%] absolute lg:w-max w-[10px]  ' alt="" />
@@ -105,7 +141,7 @@ try {
         </div>
       </div>
       <h1>CREATE YOUR ACCOUNT</h1>
-      <form className="inputs" onSubmit={register}>
+      <div className="inputs" onSubmit={register}>
         <div className="firstInput">
         <label htmlFor="">Team’s Name</label>
         <input
@@ -174,7 +210,7 @@ try {
           <option value="100">100</option>
         </select>
         </div>
-      </form>
+      </div>
       <div className="erroM">Please review your registration details before submitting</div>
       <div className="agreed">
       <input
@@ -182,21 +218,30 @@ onClick={(e)=> setchecked(!checked)}
  type="checkbox" name="" id="" />
       <p>I agreed with the event terms and conditions  and privacy policy</p>
       </div>
-      <div className={`load w-full flex justify-center items-center ${load?"block":'hidden'}`}>
+      <div className={`${load?"block":"hidden"} w-full flex justify-center items-center}`}>
     <Audio
     color='#D434FE'
     height={50}
     width={50}
     />
       </div>
-<Link to={done && checked ?"/confirmation": ''}
+      {/* 
+      <Link to={done && checked ?"/confirmation": ''}
 onClick={()=>{
   checked?'':alert("You must accept terms and conditions")
   setload(true)
 }}
-> <button className='w-full'>Register Now</button></Link>
+>
+       */}
+ <button type='submit' onClick={(
+  register()
+   )} className='w-full'>Register Now</button>
+ {/* </Link> */}
      </div>
      </div>
+     </form>
+     )
+    }
     </div>
   )
 }

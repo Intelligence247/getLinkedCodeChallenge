@@ -1,9 +1,9 @@
 import React from 'react'
 import "./ConfirmationPage.css"
 import { Link } from 'react-router-dom'
-const ConfirmationPage = () => {
+const ConfirmationPage = (props) => {
   return (
-    <div className='w-full h-screen flex justify-center items-center p-4 relative'>
+    <div className={`w-full ${props.height} flex justify-center items-center p-4 relative`}>
       <div >
      <div className=" lg:w-[35rem] lg:h-[30rem] w-full border-2 border-primaryPurple flex  flex-col justify-center items-center p-6 space-y-6 relative">
      <img src="starblue.png" className=' left-[100%] -top-[10%] absolute lg:w-max w-[10px]  ' alt="" />
