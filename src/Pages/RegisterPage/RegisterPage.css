@@ -36,3 +36,6 @@ select option{
 .agreed{
     @apply flex items-baseline lg:space-x-4 space-x-3 text-sm
 }
+.registrationWrapper button[type="submit"]{
+    @apply w-full
+}
